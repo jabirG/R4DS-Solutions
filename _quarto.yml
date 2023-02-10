@@ -1,0 +1,18 @@
+project:
+  type: book
+
+book:
+  title: "R4DS Solutions"
+  author: "Jabir"
+  date: now
+  chapters:
+    - index.qmd
+    - chapter-2.qmd
+    
+
+
+
+format:
+  html:
+    theme: cosmo
+  
