@@ -6,6 +6,13 @@ editor: visual
 
 # Notes
 
+Instead, we recommend replacing the unusual values with missing values. The easiest way to do this is to use [`mutate()`](https://dplyr.tidyverse.org/reference/mutate.html) to replace the variable with a modified copy. You can use the [`if_else()`](https://dplyr.tidyverse.org/reference/if_else.html) function to replace unusual values with `NA`:
+
+```{r}
+ diamonds |> 
+  mutate(y = if_else(y < 3 | y > 20, NA, y))
+```
+
 coord_cartesian() zoom into y
 
 ```{r}
@@ -23,6 +30,7 @@ ggplot(diamonds, aes(x = y)) +
 1.Explore the distribution of each of the `x`, `y`, and `z` variables in `diamonds`. What do you learn? Think about a diamond and how you might decide which dimension is the length, width, and depth.
 
 ```{r}
+library(tidyverse)
 ?diamonds
 
 ggplot(diamonds, aes(x = x , y = y)) + geom_point()
@@ -40,4 +48,52 @@ ggplot(diamonds, aes(x = price)) + geom_histogram(binwidth = 2000)
 
 ```{r}
 ggplot(diamonds, aes(x = carat)) + geom_histogram(binwidth = .1)
+```
+
+4.Compare and contrast [`coord_cartesian()`](https://ggplot2.tidyverse.org/reference/coord_cartesian.html) vs. [`xlim()`](https://ggplot2.tidyverse.org/reference/lims.html) or [`ylim()`](https://ggplot2.tidyverse.org/reference/lims.html) when zooming in on a histogram. What happens if you leave `binwidth` unset? What happens if you try and zoom so only half a bar shows?
+
+```{r}
+ggplot(diamonds, aes(x = carat)) + geom_histogram(binwidth = .1) +
+  coord_cartesian(xlim = c(0,50))
+
+ggplot(diamonds, aes(x = carat)) + geom_histogram(binwidth = .1) + 
+  coord_cartesian(ylim = c(0,50))
+```
+
+so it looks like when you use the xlim it zooms out but when you use the ylim it zooms in
+
+## Exercise 12.4.1
+
+1.What happens to missing values in a histogram? What happens to missing values in a bar chart? Why is there a difference in how missing values are handled in histograms and bar charts?
+
+the missing values are removed with a warning
+
+2.What does `na.rm = TRUE` do in [`mean()`](https://rdrr.io/r/base/mean.html) and [`sum()`](https://rdrr.io/r/base/sum.html)?
+
+for mean it determines whether na's should be removed or not and for sum should na values be removed and certain other values
+
+## Exercise 12.5.1.1
+
+1.Use what you've learned to improve the visualization of the departure times of cancelled vs. non-cancelled flights.
+
+```{r}
+canceled_flights <- nycflights13::flights |> 
+  mutate(
+    cancelled = is.na(dep_time),
+    sched_hour = sched_dep_time %/% 100,
+    sched_min = sched_dep_time %% 100,
+    sched_dep_time = sched_hour + (sched_min / 60)
+  ) 
+
+ggplot(canceled_flights,aes(x = cancelled)) +
+  geom_bar()
+
+```
+
+2.What variable in the diamonds dataset is most important for predicting the price of a diamond? How is that variable correlated with cut? Why does the combination of those two relationships lead to lower quality diamonds being more expensive?
+
+i would say maybe clarity or just straight up price,
+
+```{r}
+?diamonds
 ```
