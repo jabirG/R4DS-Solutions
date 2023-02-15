@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R4DS Solutions - 9&nbsp; Chapter 11 Layer</title>
+<title>R4DS Solutions - 11&nbsp; Chapter 11 Layer</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -94,7 +94,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./chapter-12.html" rel="next">
-<link href="./chapter-9.html" rel="prev">
+<link href="./chapter-10.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -133,7 +133,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 11 Layer</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Chapter 11 Layer</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -178,32 +178,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 6 Data Tidying</span></a>
+  <a href="./chapter-5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Workflow pipes</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">chapter 7 workflow style</span></a>
+  <a href="./chapter-6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 6 Data Tidying</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-8.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 8 importing data</span></a>
+  <a href="./chapter-7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">chapter 7 workflow style</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-9.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 9 workflow scripts and projects</span></a>
+  <a href="./chapter-8.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 8 importing data</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-11.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 11 Layer</span></a>
+  <a href="./chapter-9.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 9 workflow scripts and projects</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-12.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Chapter 12 Exploratory data analysis</span></a>
+  <a href="./chapter-10.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Workflow getting help</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-11.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Chapter 11 Layer</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-12.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Chapter 12 Exploratory data analysis</span></a>
   </div>
 </li>
     </ul>
@@ -215,16 +225,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#notes" id="toc-notes" class="nav-link active" data-scroll-target="#notes"><span class="toc-section-number">10</span>  Notes</a></li>
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions"><span class="toc-section-number">11</span>  Questions</a></li>
-  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions"><span class="toc-section-number">12</span>  Solutions</a>
+  <li><a href="#notes" id="toc-notes" class="nav-link active" data-scroll-target="#notes"><span class="toc-section-number">12</span>  Notes</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions"><span class="toc-section-number">13</span>  Questions</a></li>
+  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions"><span class="toc-section-number">14</span>  Solutions</a>
   <ul class="collapse">
-  <li><a href="#exercise-11.2.1" id="toc-exercise-11.2.1" class="nav-link" data-scroll-target="#exercise-11.2.1"><span class="toc-section-number">12.1</span>  Exercise 11.2.1</a></li>
-  <li><a href="#exercise-11.3.1" id="toc-exercise-11.3.1" class="nav-link" data-scroll-target="#exercise-11.3.1"><span class="toc-section-number">12.2</span>  Exercise 11.3.1</a></li>
-  <li><a href="#exercise-11.4.1" id="toc-exercise-11.4.1" class="nav-link" data-scroll-target="#exercise-11.4.1"><span class="toc-section-number">12.3</span>  Exercise 11.4.1</a></li>
-  <li><a href="#exercise-11.5.1" id="toc-exercise-11.5.1" class="nav-link" data-scroll-target="#exercise-11.5.1"><span class="toc-section-number">12.4</span>  Exercise 11.5.1</a></li>
-  <li><a href="#exercise-11.6.1" id="toc-exercise-11.6.1" class="nav-link" data-scroll-target="#exercise-11.6.1"><span class="toc-section-number">12.5</span>  Exercise 11.6.1</a></li>
-  <li><a href="#exercise-11.7.1" id="toc-exercise-11.7.1" class="nav-link" data-scroll-target="#exercise-11.7.1"><span class="toc-section-number">12.6</span>  Exercise 11.7.1</a></li>
+  <li><a href="#exercise-11.2.1" id="toc-exercise-11.2.1" class="nav-link" data-scroll-target="#exercise-11.2.1"><span class="toc-section-number">14.1</span>  Exercise 11.2.1</a></li>
+  <li><a href="#exercise-11.3.1" id="toc-exercise-11.3.1" class="nav-link" data-scroll-target="#exercise-11.3.1"><span class="toc-section-number">14.2</span>  Exercise 11.3.1</a></li>
+  <li><a href="#exercise-11.4.1" id="toc-exercise-11.4.1" class="nav-link" data-scroll-target="#exercise-11.4.1"><span class="toc-section-number">14.3</span>  Exercise 11.4.1</a></li>
+  <li><a href="#exercise-11.5.1" id="toc-exercise-11.5.1" class="nav-link" data-scroll-target="#exercise-11.5.1"><span class="toc-section-number">14.4</span>  Exercise 11.5.1</a></li>
+  <li><a href="#exercise-11.6.1" id="toc-exercise-11.6.1" class="nav-link" data-scroll-target="#exercise-11.6.1"><span class="toc-section-number">14.5</span>  Exercise 11.6.1</a></li>
+  <li><a href="#exercise-11.7.1" id="toc-exercise-11.7.1" class="nav-link" data-scroll-target="#exercise-11.7.1"><span class="toc-section-number">14.6</span>  Exercise 11.7.1</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -234,7 +244,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 11 Layer</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Chapter 11 Layer</span></h1>
 </div>
 
 
@@ -249,8 +259,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="notes" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Notes</h1>
+<section id="notes" class="level1" data-number="12">
+<h1 data-number="12"><span class="header-section-number">12</span> Notes</h1>
 <p>spooky new map code</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -353,13 +363,13 @@ The following object is masked from 'package:purrr':
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Picking joint bandwidth of 1.28</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="questions" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> Questions</h1>
+<section id="questions" class="level1" data-number="13">
+<h1 data-number="13"><span class="header-section-number">13</span> Questions</h1>
 </section>
-<section id="solutions" class="level1" data-number="12">
-<h1 data-number="12"><span class="header-section-number">12</span> Solutions</h1>
-<section id="exercise-11.2.1" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="exercise-11.2.1"><span class="header-section-number">12.1</span> Exercise 11.2.1</h2>
+<section id="solutions" class="level1" data-number="14">
+<h1 data-number="14"><span class="header-section-number">14</span> Solutions</h1>
+<section id="exercise-11.2.1" class="level2" data-number="14.1">
+<h2 data-number="14.1" class="anchored" data-anchor-id="exercise-11.2.1"><span class="header-section-number">14.1</span> Exercise 11.2.1</h2>
 <ol type="1">
 <li>Create a scatterplot of <code>hwy</code> vs.&nbsp;<code>displ</code> where the points are pink filled in triangles.</li>
 </ol>
@@ -399,8 +409,8 @@ The following object is masked from 'package:purrr':
 </div>
 </div>
 </section>
-<section id="exercise-11.3.1" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="exercise-11.3.1"><span class="header-section-number">12.2</span> Exercise 11.3.1</h2>
+<section id="exercise-11.3.1" class="level2" data-number="14.2">
+<h2 data-number="14.2" class="anchored" data-anchor-id="exercise-11.3.1"><span class="header-section-number">14.2</span> Exercise 11.3.1</h2>
 <ol type="1">
 <li>What geom would you use to draw a line chart? A boxplot? A histogram? An area chart?</li>
 </ol>
@@ -485,8 +495,8 @@ unknown aesthetics: shape</code></pre>
 </div>
 </div>
 </section>
-<section id="exercise-11.4.1" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="exercise-11.4.1"><span class="header-section-number">12.3</span> Exercise 11.4.1</h2>
+<section id="exercise-11.4.1" class="level2" data-number="14.3">
+<h2 data-number="14.3" class="anchored" data-anchor-id="exercise-11.4.1"><span class="header-section-number">14.3</span> Exercise 11.4.1</h2>
 <p>1.What happens if you facet on a continuous variable?</p>
 <p>this is what google says:</p>
 <p><strong>You’ll get one row or column for each unique value of the variable</strong></p>
@@ -565,8 +575,8 @@ unknown aesthetics: shape</code></pre>
 </div>
 </div>
 </section>
-<section id="exercise-11.5.1" class="level2" data-number="12.4">
-<h2 data-number="12.4" class="anchored" data-anchor-id="exercise-11.5.1"><span class="header-section-number">12.4</span> Exercise 11.5.1</h2>
+<section id="exercise-11.5.1" class="level2" data-number="14.4">
+<h2 data-number="14.4" class="anchored" data-anchor-id="exercise-11.5.1"><span class="header-section-number">14.4</span> Exercise 11.5.1</h2>
 <p>1.What is the default geom associated with <a href="https://ggplot2.tidyverse.org/reference/stat_summary.html"><code>stat_summary()</code></a>? How could you rewrite the previous plot to use that geom function instead of the stat function?</p>
 <p>i believe its geom_point</p>
 <p>2.What does <a href="https://ggplot2.tidyverse.org/reference/geom_bar.html"><code>geom_col()</code></a> do? How is it different from <a href="https://ggplot2.tidyverse.org/reference/geom_bar.html"><code>geom_bar()</code></a>?</p>
@@ -603,8 +613,8 @@ unknown aesthetics: shape</code></pre>
 </div>
 </div>
 </section>
-<section id="exercise-11.6.1" class="level2" data-number="12.5">
-<h2 data-number="12.5" class="anchored" data-anchor-id="exercise-11.6.1"><span class="header-section-number">12.5</span> Exercise 11.6.1</h2>
+<section id="exercise-11.6.1" class="level2" data-number="14.5">
+<h2 data-number="14.5" class="anchored" data-anchor-id="exercise-11.6.1"><span class="header-section-number">14.5</span> Exercise 11.6.1</h2>
 <p>1.What is the problem with this plot? How could you improve it?</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> cty, <span class="at">y =</span> hwy)) <span class="sc">+</span> </span>
@@ -631,8 +641,8 @@ unknown aesthetics: shape</code></pre>
 </div>
 </div>
 </section>
-<section id="exercise-11.7.1" class="level2" data-number="12.6">
-<h2 data-number="12.6" class="anchored" data-anchor-id="exercise-11.7.1"><span class="header-section-number">12.6</span> Exercise 11.7.1</h2>
+<section id="exercise-11.7.1" class="level2" data-number="14.6">
+<h2 data-number="14.6" class="anchored" data-anchor-id="exercise-11.7.1"><span class="header-section-number">14.6</span> Exercise 11.7.1</h2>
 <p>1.Turn a stacked bar chart into a pie chart using <a href="https://ggplot2.tidyverse.org/reference/coord_polar.html"><code>coord_polar()</code></a>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> cut, <span class="at">fill =</span> clarity)) <span class="sc">+</span> </span>
@@ -795,13 +805,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./chapter-9.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 9 workflow scripts and projects</span></span>
+      <a href="./chapter-10.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Workflow getting help</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./chapter-12.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Chapter 12 Exploratory data analysis</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Chapter 12 Exploratory data analysis</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R4DS Solutions - 10&nbsp; Chapter 12 Exploratory data analysis</title>
+<title>R4DS Solutions - 12&nbsp; Chapter 12 Exploratory data analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -132,7 +132,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Chapter 12 Exploratory data analysis</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Chapter 12 Exploratory data analysis</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -177,32 +177,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 6 Data Tidying</span></a>
+  <a href="./chapter-5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Workflow pipes</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">chapter 7 workflow style</span></a>
+  <a href="./chapter-6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 6 Data Tidying</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-8.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 8 importing data</span></a>
+  <a href="./chapter-7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">chapter 7 workflow style</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-9.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 9 workflow scripts and projects</span></a>
+  <a href="./chapter-8.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 8 importing data</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-11.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 11 Layer</span></a>
+  <a href="./chapter-9.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 9 workflow scripts and projects</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-12.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Chapter 12 Exploratory data analysis</span></a>
+  <a href="./chapter-10.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Workflow getting help</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-11.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Chapter 11 Layer</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-12.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Chapter 12 Exploratory data analysis</span></a>
   </div>
 </li>
     </ul>
@@ -214,14 +224,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#notes" id="toc-notes" class="nav-link active" data-scroll-target="#notes"><span class="toc-section-number">11</span>  Notes</a></li>
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions"><span class="toc-section-number">12</span>  Questions</a></li>
-  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions"><span class="toc-section-number">13</span>  Solutions</a>
+  <li><a href="#notes" id="toc-notes" class="nav-link active" data-scroll-target="#notes"><span class="toc-section-number">13</span>  Notes</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions"><span class="toc-section-number">14</span>  Questions</a></li>
+  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions"><span class="toc-section-number">15</span>  Solutions</a>
   <ul class="collapse">
-  <li><a href="#exercise-12.3.3" id="toc-exercise-12.3.3" class="nav-link" data-scroll-target="#exercise-12.3.3"><span class="toc-section-number">13.1</span>  Exercise 12.3.3</a></li>
-  <li><a href="#exercise-12.4.1" id="toc-exercise-12.4.1" class="nav-link" data-scroll-target="#exercise-12.4.1"><span class="toc-section-number">13.2</span>  Exercise 12.4.1</a></li>
-  <li><a href="#exercise-12.5.1.1" id="toc-exercise-12.5.1.1" class="nav-link" data-scroll-target="#exercise-12.5.1.1"><span class="toc-section-number">13.3</span>  Exercise 12.5.1.1</a></li>
-  <li><a href="#exercise-12.5.2.1" id="toc-exercise-12.5.2.1" class="nav-link" data-scroll-target="#exercise-12.5.2.1"><span class="toc-section-number">13.4</span>  Exercise 12.5.2.1</a></li>
+  <li><a href="#exercise-12.3.3" id="toc-exercise-12.3.3" class="nav-link" data-scroll-target="#exercise-12.3.3"><span class="toc-section-number">15.1</span>  Exercise 12.3.3</a></li>
+  <li><a href="#exercise-12.4.1" id="toc-exercise-12.4.1" class="nav-link" data-scroll-target="#exercise-12.4.1"><span class="toc-section-number">15.2</span>  Exercise 12.4.1</a></li>
+  <li><a href="#exercise-12.5.1.1" id="toc-exercise-12.5.1.1" class="nav-link" data-scroll-target="#exercise-12.5.1.1"><span class="toc-section-number">15.3</span>  Exercise 12.5.1.1</a></li>
+  <li><a href="#exercise-12.5.2.1" id="toc-exercise-12.5.2.1" class="nav-link" data-scroll-target="#exercise-12.5.2.1"><span class="toc-section-number">15.4</span>  Exercise 12.5.2.1</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -231,7 +241,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Chapter 12 Exploratory data analysis</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Chapter 12 Exploratory data analysis</span></h1>
 </div>
 
 
@@ -246,8 +256,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="notes" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> Notes</h1>
+<section id="notes" class="level1" data-number="13">
+<h1 data-number="13"><span class="header-section-number">13</span> Notes</h1>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -344,13 +354,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 </div>
 </section>
-<section id="questions" class="level1" data-number="12">
-<h1 data-number="12"><span class="header-section-number">12</span> Questions</h1>
+<section id="questions" class="level1" data-number="14">
+<h1 data-number="14"><span class="header-section-number">14</span> Questions</h1>
 </section>
-<section id="solutions" class="level1" data-number="13">
-<h1 data-number="13"><span class="header-section-number">13</span> Solutions</h1>
-<section id="exercise-12.3.3" class="level2" data-number="13.1">
-<h2 data-number="13.1" class="anchored" data-anchor-id="exercise-12.3.3"><span class="header-section-number">13.1</span> Exercise 12.3.3</h2>
+<section id="solutions" class="level1" data-number="15">
+<h1 data-number="15"><span class="header-section-number">15</span> Solutions</h1>
+<section id="exercise-12.3.3" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="exercise-12.3.3"><span class="header-section-number">15.1</span> Exercise 12.3.3</h2>
 <p>1.Explore the distribution of each of the <code>x</code>, <code>y</code>, and <code>z</code> variables in <code>diamonds</code>. What do you learn? Think about a diamond and how you might decide which dimension is the length, width, and depth.</p>
 <p>look up help ?diamonds</p>
 <div class="cell">
@@ -392,15 +402,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>so it looks like when you use the xlim it zooms out but when you use the ylim it zooms in</p>
 </section>
-<section id="exercise-12.4.1" class="level2" data-number="13.2">
-<h2 data-number="13.2" class="anchored" data-anchor-id="exercise-12.4.1"><span class="header-section-number">13.2</span> Exercise 12.4.1</h2>
+<section id="exercise-12.4.1" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="exercise-12.4.1"><span class="header-section-number">15.2</span> Exercise 12.4.1</h2>
 <p>1.What happens to missing values in a histogram? What happens to missing values in a bar chart? Why is there a difference in how missing values are handled in histograms and bar charts?</p>
 <p>the missing values are removed with a warning</p>
 <p>2.What does <code>na.rm = TRUE</code> do in <a href="https://rdrr.io/r/base/mean.html"><code>mean()</code></a> and <a href="https://rdrr.io/r/base/sum.html"><code>sum()</code></a>?</p>
 <p>for mean it determines whether na’s should be removed or not and for sum should na values be removed and certain other values</p>
 </section>
-<section id="exercise-12.5.1.1" class="level2" data-number="13.3">
-<h2 data-number="13.3" class="anchored" data-anchor-id="exercise-12.5.1.1"><span class="header-section-number">13.3</span> Exercise 12.5.1.1</h2>
+<section id="exercise-12.5.1.1" class="level2" data-number="15.3">
+<h2 data-number="15.3" class="anchored" data-anchor-id="exercise-12.5.1.1"><span class="header-section-number">15.3</span> Exercise 12.5.1.1</h2>
 <p>1.Use what you’ve learned to improve the visualization of the departure times of cancelled vs.&nbsp;non-cancelled flights.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>canceled_flights <span class="ot">&lt;-</span> nycflights13<span class="sc">::</span>flights <span class="sc">|&gt;</span> </span>
@@ -442,8 +452,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>6.If you have a small dataset, it’s sometimes useful to use <a href="https://ggplot2.tidyverse.org/reference/geom_jitter.html"><code>geom_jitter()</code></a> to see the relationship between a continuous and categorical variable. The ggbeeswarm package provides a number of methods similar to <a href="https://ggplot2.tidyverse.org/reference/geom_jitter.html"><code>geom_jitter()</code></a>. List them and briefly describe what each one does</p>
 <p>so geom_beeswarm makes it so you have more control over overplotting datasets, while geom_jitter to me seems like just a default that you can use on the go but if you do want more customization ggbeeswarm is better for handling overplotting</p>
 </section>
-<section id="exercise-12.5.2.1" class="level2" data-number="13.4">
-<h2 data-number="13.4" class="anchored" data-anchor-id="exercise-12.5.2.1"><span class="header-section-number">13.4</span> Exercise 12.5.2.1</h2>
+<section id="exercise-12.5.2.1" class="level2" data-number="15.4">
+<h2 data-number="15.4" class="anchored" data-anchor-id="exercise-12.5.2.1"><span class="header-section-number">15.4</span> Exercise 12.5.2.1</h2>
 <p>1.How could you rescale the count dataset above to more clearly show the distribution of cut within color, or color within cut?</p>
 <p>i can use this code from earlier that shows exactly that</p>
 <div class="cell">
@@ -630,7 +640,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./chapter-11.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 11 Layer</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Chapter 11 Layer</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

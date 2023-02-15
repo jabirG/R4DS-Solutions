@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R4DS Solutions - 7&nbsp; Chapter 8 importing data</title>
+<title>R4DS Solutions - 8&nbsp; Chapter 8 importing data</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -133,7 +133,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 8 importing data</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 8 importing data</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -178,32 +178,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 6 Data Tidying</span></a>
+  <a href="./chapter-5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Workflow pipes</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">chapter 7 workflow style</span></a>
+  <a href="./chapter-6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 6 Data Tidying</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-8.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 8 importing data</span></a>
+  <a href="./chapter-7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">chapter 7 workflow style</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-9.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 9 workflow scripts and projects</span></a>
+  <a href="./chapter-8.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 8 importing data</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-11.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 11 Layer</span></a>
+  <a href="./chapter-9.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 9 workflow scripts and projects</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-12.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Chapter 12 Exploratory data analysis</span></a>
+  <a href="./chapter-10.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Workflow getting help</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-11.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Chapter 11 Layer</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./chapter-12.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Chapter 12 Exploratory data analysis</span></a>
   </div>
 </li>
     </ul>
@@ -215,11 +225,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#notes" id="toc-notes" class="nav-link active" data-scroll-target="#notes"><span class="toc-section-number">8</span>  Notes</a></li>
-  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions"><span class="toc-section-number">9</span>  Questions</a></li>
-  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions"><span class="toc-section-number">10</span>  Solutions</a>
+  <li><a href="#notes" id="toc-notes" class="nav-link active" data-scroll-target="#notes"><span class="toc-section-number">9</span>  Notes</a></li>
+  <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions"><span class="toc-section-number">10</span>  Questions</a></li>
+  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions"><span class="toc-section-number">11</span>  Solutions</a>
   <ul class="collapse">
-  <li><a href="#exercise-8.2.4" id="toc-exercise-8.2.4" class="nav-link" data-scroll-target="#exercise-8.2.4"><span class="toc-section-number">10.1</span>  Exercise 8.2.4</a></li>
+  <li><a href="#exercise-8.2.4" id="toc-exercise-8.2.4" class="nav-link" data-scroll-target="#exercise-8.2.4"><span class="toc-section-number">11.1</span>  Exercise 8.2.4</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -229,7 +239,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 8 importing data</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 8 importing data</span></h1>
 </div>
 
 
@@ -244,14 +254,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="notes" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Notes</h1>
+<section id="notes" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Notes</h1>
 </section>
-<section id="questions" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Questions</h1>
+<section id="questions" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Questions</h1>
 </section>
-<section id="solutions" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Solutions</h1>
+<section id="solutions" class="level1" data-number="11">
+<h1 data-number="11"><span class="header-section-number">11</span> Solutions</h1>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -265,8 +275,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ✖ dplyr::lag()    masks stats::lag()</code></pre>
 </div>
 </div>
-<section id="exercise-8.2.4" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="exercise-8.2.4"><span class="header-section-number">10.1</span> Exercise 8.2.4</h2>
+<section id="exercise-8.2.4" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="exercise-8.2.4"><span class="header-section-number">11.1</span> Exercise 8.2.4</h2>
 <p>1.What function would you use to read a file where fields were separated with “|”?</p>
 <p>read_delim</p>
 <p>2.Apart from <code>file</code>, <code>skip</code>, and <code>comment</code>, what other arguments do <a href="https://readr.tidyverse.org/reference/read_delim.html"><code>read_csv()</code></a> and <a href="https://readr.tidyverse.org/reference/read_delim.html"><code>read_tsv()</code></a> have in common?</p>
@@ -544,12 +554,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./chapter-7.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">chapter 7 workflow style</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">chapter 7 workflow style</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./chapter-9.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 9 workflow scripts and projects</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Chapter 9 workflow scripts and projects</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
