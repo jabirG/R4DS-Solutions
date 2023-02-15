@@ -1,10 +1,8 @@
 ---
-title: "Chapter 11 Layer"
-format: html
-editor: visual
+title: "Layers"
 ---
 
-# Notes
+## Notes
 
 spooky new map code
 
@@ -67,9 +65,9 @@ ggplot(mpg, aes(x = hwy, y = drv, fill = drv, color = drv)) +
 #> Picking joint bandwidth of 1.28
 ```
 
-# Questions
+## Questions
 
-# Solutions
+
 
 ## Exercise 11.2.1
 

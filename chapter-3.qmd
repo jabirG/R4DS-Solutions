@@ -2,11 +2,11 @@
 title: "Workflow Basics"
 ---
 
-# Notes
+## Notes
 
-# Questions
+## Questions
 
-# Solutions
+
 
 ## 3.5 Exercises
 

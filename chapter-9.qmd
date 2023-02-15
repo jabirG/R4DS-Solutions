@@ -1,14 +1,12 @@
 ---
-title: "Chapter 9 workflow scripts and projects"
-format: html
-editor: visual
+title: "workflow scripts and projects"
 ---
 
-# Notes
+## Notes
 
-# Questions
+## Questions
 
-# Solutions
+
 
 1.what tip from twitter did i like?
 

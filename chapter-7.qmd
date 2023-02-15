@@ -1,14 +1,12 @@
 ---
-title: "chapter 7 workflow style"
-format: html
-editor: visual
+title: "workflow style"
 ---
 
-# Notes
+## Notes
 
-# Questions
+## Questions
 
-# Solutions
+
 
 ## Exercises 7.6
 

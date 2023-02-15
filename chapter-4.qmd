@@ -1,17 +1,13 @@
 ---
-title: "Chapter 4 Data Transformation"
-author: "jabir"
-format: html
-editor: visual
+title: "Data Transformation"
 ---
 
-# Notes
+## Notes
 
-# Questions
+## Questions
 
 For question 3 I don't really know where to start with calculations
 
-# Solutions
 
 ```{r}
 library(nycflights13)

@@ -1,14 +1,12 @@
 ---
-title: "Chapter 8 importing data"
-format: html
-editor: visual
+title: "importing data"
 ---
 
-# Notes
+## Notes
 
-# Questions
+## Questions
 
-# Solutions
+
 
 ```{r}
 library(tidyverse)

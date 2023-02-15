@@ -1,17 +1,14 @@
 ---
-title: "Chapter 6 Data Tidying"
-author: "jabir"
-format: html
-editor: visual
+title: "Data Tidying"
 ---
 
-# Notes
+## Notes
 
 Using prose, describe how the variables and observations are organised in each of the sample tables.
 
-# Questions
+## Questions
 
-# Solutions
+
 
 ```{r}
 library(tidyverse)
