@@ -13,6 +13,10 @@ Using prose, describe how the variables and observations are organised in each o
 
 # Solutions
 
+```{r}
+library(tidyverse)
+```
+
 ## 6.2.1 Exercises
 
 1.Using prose, describe how the variables and observations are organised in each of the sample tables

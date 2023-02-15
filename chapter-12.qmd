@@ -6,10 +6,54 @@ editor: visual
 
 # Notes
 
+```{r}
+library(tidyverse)
+library(ggbeeswarm)
+```
+
+Heatmaply package and seriation package:
+
+If the categorical variables are unordered, you might want to use the seriation package to simultaneously reorder the rows and columns in order to more clearly reveal interesting patterns. For larger plots, you might want to try the heatmaply package, which creates interactive plots.
+
+Another approach for exploring the relationship between these variables is computing the counts with dplyr:
+
+```{r}
+diamonds |> 
+  count(color, cut)
+#> # A tibble: 35 × 3
+#>   color cut           n
+#>   <ord> <ord>     <int>
+#> 1 D     Fair        163
+#> 2 D     Good        662
+#> 3 D     Very Good  1513
+#> 4 D     Premium    1603
+#> 5 D     Ideal      2834
+#> 6 E     Fair        224
+#> # … with 29 more rows
+```
+
+Then visualize with [`geom_tile()`](https://ggplot2.tidyverse.org/reference/geom_tile.html) and the fill aesthetic:
+
+```{r}
+diamonds |> 
+  count(color, cut) |>  
+  ggplot(aes(x = color, y = cut)) +
+  geom_tile(aes(fill = n))
+```
+
+To visualize the covariation between categorical variables, you'll need to count the number of observations for each combination of levels of these categorical variables. One way to do that is to rely on the built-in `geom_count()`
+
+```{r}
+ggplot(diamonds, aes(x = cut, y = color)) +
+  geom_count()
+```
+
 Instead, we recommend replacing the unusual values with missing values. The easiest way to do this is to use [`mutate()`](https://dplyr.tidyverse.org/reference/mutate.html) to replace the variable with a modified copy. You can use the [`if_else()`](https://dplyr.tidyverse.org/reference/if_else.html) function to replace unusual values with `NA`:
 
 ```{r}
- diamonds |> 
+
+ 
+diamonds |> 
   mutate(y = if_else(y < 3 | y > 20, NA, y))
 ```
 
@@ -29,9 +73,11 @@ ggplot(diamonds, aes(x = y)) +
 
 1.Explore the distribution of each of the `x`, `y`, and `z` variables in `diamonds`. What do you learn? Think about a diamond and how you might decide which dimension is the length, width, and depth.
 
+look up help ?diamonds
+
 ```{r}
 library(tidyverse)
-?diamonds
+
 
 ggplot(diamonds, aes(x = x , y = y)) + geom_point()
 ```
@@ -92,8 +138,57 @@ ggplot(canceled_flights,aes(x = cancelled)) +
 
 2.What variable in the diamonds dataset is most important for predicting the price of a diamond? How is that variable correlated with cut? Why does the combination of those two relationships lead to lower quality diamonds being more expensive?
 
-i would say maybe clarity or just straight up price,
+i would say maybe clarity or just straight up price, i think because the lower quality diamonds correspond to people buying them who don't really know about diamonds or don't care about the quality,theres alot more lower quality diamonds than higher quality
+
+?diamonds
+
+3.Instead of exchanging the x and y variables, add [`coord_flip()`](https://ggplot2.tidyverse.org/reference/coord_flip.html) as a new layer to the vertical boxplot to create a horizontal one. How does this compare to using exchanging the variables?
+
+it switching the x and y its alot faster
 
 ```{r}
-?diamonds
+ggplot(mpg, aes(x = hwy, y = fct_reorder(class, hwy, median))) +
+  geom_boxplot() + coord_flip()
+```
+
+4.One problem with boxplots is that they were developed in an era of much smaller datasets and tend to display a prohibitively large number of "outlying values". One approach to remedy this problem is the letter value plot. Install the lvplot package, and try using `geom_lv()` to display the distribution of price vs. cut. What do you learn? How do you interpret the plots?
+
+my version of r can't get this
+
+5.Compare and contrast [`geom_violin()`](https://ggplot2.tidyverse.org/reference/geom_violin.html) with a faceted [`geom_histogram()`](https://ggplot2.tidyverse.org/reference/geom_histogram.html), or a colored [`geom_freqpoly()`](https://ggplot2.tidyverse.org/reference/geom_histogram.html). What are the pros and cons of each method?
+
+```{r}
+ggplot(diamonds,aes(x = cut, y = price)) +
+  geom_violin()  
+```
+
+6.If you have a small dataset, it's sometimes useful to use [`geom_jitter()`](https://ggplot2.tidyverse.org/reference/geom_jitter.html) to see the relationship between a continuous and categorical variable. The ggbeeswarm package provides a number of methods similar to [`geom_jitter()`](https://ggplot2.tidyverse.org/reference/geom_jitter.html). List them and briefly describe what each one does
+
+so geom_beeswarm makes it so you have more control over overplotting datasets, while geom_jitter to me seems like just a default that you can use on the go but if you do want more customization ggbeeswarm is better for handling overplotting
+
+## Exercise 12.5.2.1
+
+1.How could you rescale the count dataset above to more clearly show the distribution of cut within color, or color within cut?
+
+i can use this code from earlier that shows exactly that
+
+```{r}
+
+ggplot(diamonds, aes(x = cut, y = color)) +
+  geom_count()
+```
+
+2.How does the segmented bar chart change if color is mapped to the `x` aesthetic and `cut` is mapped to the `fill` aesthetic? Calculate the counts that fall into each of the segments.
+
+```{r}
+ggplot(diamonds,aes( x = color, fill = cut)) +
+  geom_bar(position = "fill")
+```
+
+3.Use [`geom_tile()`](https://ggplot2.tidyverse.org/reference/geom_tile.html) together with dplyr to explore how average flight delays vary by destination and month of year. What makes the plot difficult to read? How could you improve it?
+
+```{r}
+glimpse(nycflights13::flights)
+
+
 ```

@@ -9,6 +9,11 @@ editor: visual
 spooky new map code
 
 ```{r}
+library(tidyverse)
+library(maps)
+```
+
+```{r}
 nz <- map_data("nz")
 
 ggplot(nz, aes(x = long, y = lat, group = group)) +

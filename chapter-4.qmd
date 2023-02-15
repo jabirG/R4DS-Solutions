@@ -178,6 +178,7 @@ flights %>% group_by(dep_delay,dest) %>% summarise(n())
 3.How do delays vary over the course of the day. Illustrate your answer with a plot.
 
 ```{r}
+#| eval: false
 ggplot(flights,aes(x = time_hour,y = dep_delay)) + geom_smooth()
 ```
 
@@ -186,6 +187,7 @@ ggplot(flights,aes(x = time_hour,y = dep_delay)) + geom_smooth()
 you get a error
 
 ```{r}
+#| error: true
 flights %>% slice_min(-n)
 ```
 

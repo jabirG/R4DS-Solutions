@@ -1,11 +1,8 @@
 ---
-title: "Chapter 2 Data Visualization"
-author: "Jabir Ghaffar"
-date: "2023-01-18"
-format: html 
+title: "Data Visualization"
 ---
 
-# Notes
+## Notes
 
 `alpha` aesthetic to add transparency to the filled density curves.
 
@@ -24,8 +21,6 @@ that second part of the question is really unclear to me
 3.In the scatterplot of `hwy` vs. `displ`, what happens if you map a third variable to `linewidth`?
 
 i don't know how to map a third variable??
-
-# Solutions
 
 ## 2.2.5 Exercises
 
