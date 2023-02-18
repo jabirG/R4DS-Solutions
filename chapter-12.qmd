@@ -65,8 +65,6 @@ ggplot(diamonds, aes(x = y)) +
 
 ## Questions
 
-
-
 ## Exercise 12.3.3
 
 1.Explore the distribution of each of the `x`, `y`, and `z` variables in `diamonds`. What do you learn? Think about a diamond and how you might decide which dimension is the length, width, and depth.
@@ -155,9 +153,24 @@ my version of r can't get this
 
 5.Compare and contrast [`geom_violin()`](https://ggplot2.tidyverse.org/reference/geom_violin.html) with a faceted [`geom_histogram()`](https://ggplot2.tidyverse.org/reference/geom_histogram.html), or a colored [`geom_freqpoly()`](https://ggplot2.tidyverse.org/reference/geom_histogram.html). What are the pros and cons of each method?
 
+geom_violin shows a basic understanding of the amount of diamonds while geom_histogram shows the further outliers better and where they are and geom_freqpoly shows the count better
+
 ```{r}
-ggplot(diamonds,aes(x = cut, y = price)) +
-  geom_violin()  
+ggplot(diamonds,aes(x = price, y = clarity)) +
+  geom_violin()
+```
+
+```{r}
+ggplot(diamonds,aes(x = price)) +
+  geom_histogram() +
+  facet_wrap(~clarity, ncol = 1, scales = "free_y")
+#> `stat_bin()` using `bins = 30`. Pick better value with `binwidth`
+```
+
+```{r}
+ggplot(diamonds,aes(x = price, color = clarity)) +
+  geom_freqpoly()
+#> `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 ```
 
 6.If you have a small dataset, it's sometimes useful to use [`geom_jitter()`](https://ggplot2.tidyverse.org/reference/geom_jitter.html) to see the relationship between a continuous and categorical variable. The ggbeeswarm package provides a number of methods similar to [`geom_jitter()`](https://ggplot2.tidyverse.org/reference/geom_jitter.html). List them and briefly describe what each one does
@@ -179,7 +192,9 @@ ggplot(diamonds, aes(x = cut, y = color)) +
 2.How does the segmented bar chart change if color is mapped to the `x` aesthetic and `cut` is mapped to the `fill` aesthetic? Calculate the counts that fall into each of the segments.
 
 ```{r}
-ggplot(diamonds,aes( x = color, fill = cut)) +
+count(diamonds,color,cut)
+ 
+ ggplot(diamonds,aes( x = color, fill = cut)) +
   geom_bar(position = "fill")
 ```
 
@@ -188,5 +203,11 @@ ggplot(diamonds,aes( x = color, fill = cut)) +
 ```{r}
 glimpse(nycflights13::flights)
 
+nycflights13::flights %>% summarise(dest,month,year) %>% 
+  group_by(dest,month)
 
 ```
+
+## Exercise 12.5.3.1
+
+1.Instead of summarizing the conditional distribution with a boxplot, you could use a frequency polygon. What do you need to consider when using [`cut_width()`](https://ggplot2.tidyverse.org/reference/cut_interval.html) vs. [`cut_number()`](https://ggplot2.tidyverse.org/reference/cut_interval.html)? How does that impact a visualization of the 2d distribution of `carat` and `price`?
