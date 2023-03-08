@@ -1,10 +1,10 @@
 ---
-title: "workflow scripts and projects"
+title: "Workflow: scripts and projects"
 ---
 
-## Notes
 
-## Questions
+
+## Solutions
 
 1.what tip from twitter did i like?
 

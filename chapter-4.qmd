@@ -1,8 +1,8 @@
 ---
-title: "Data Transformation"
+title: "Data transformation"
 ---
 
-## Notes
+
 
 ## Questions
 
@@ -21,6 +21,8 @@ library(tidyverse)
 #> ✖ dplyr::filter() masks stats::filter()
 #> ✖ dplyr::lag()    masks stats::lag()
 ```
+
+##Solutions
 
 ## 4.2.5 Exercises
 

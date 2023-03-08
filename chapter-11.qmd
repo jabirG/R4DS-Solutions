@@ -69,7 +69,7 @@ ggplot(diamonds, aes(x = y)) +
   coord_cartesian(ylim = c(0, 50))
 ```
 
-## Questions
+## Solutions
 
 ## Exercise 12.3.3
 

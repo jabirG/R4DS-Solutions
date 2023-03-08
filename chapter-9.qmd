@@ -1,11 +1,11 @@
 ---
-title: "workflow getting help"
+title: "Workflow: getting help"
 ---
 
 ## Notes
 
 this chapter has no exercises
 
-## Questions
+
 
 

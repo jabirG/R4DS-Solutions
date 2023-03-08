@@ -1,7 +1,8 @@
 ---
-title: "Workflow code style"
+title: "Workflow: code style"
 ---
 
+##Solutions
 
 ## Exercises 7.6
 

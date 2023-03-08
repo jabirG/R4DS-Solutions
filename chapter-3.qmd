@@ -1,12 +1,8 @@
 ---
-title: "Workflow Basics"
+title: "Workflow: basics"
 ---
 
-## Notes
-
-## Questions
-
-
+##Solutions
 
 ## 3.5 Exercises
 

@@ -1,13 +1,13 @@
 ---
-title: "Data Tidying"
+title: "Data tidying"
 ---
 
 ## Notes
 
 Using prose, describe how the variables and observations are organised in each of the sample tables.
 
-## Questions
 
+##Solutions
 
 
 ```{r}
