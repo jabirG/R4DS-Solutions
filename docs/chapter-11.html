@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>R4DS Solutions - 11&nbsp; Layers</title>
+<title>R4DS Solutions - 11&nbsp; Exploratory data analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -133,7 +133,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Layers</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Exploratory data analysis</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -178,7 +178,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Workflow pipes</span></a>
+  <a href="./chapter-5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Workflow code style</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -188,7 +188,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">workflow style</span></a>
+  <a href="./chapter-7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">workflow scripts and projects</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -198,22 +198,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-9.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">workflow scripts and projects</span></a>
+  <a href="./chapter-9.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">workflow getting help</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-10.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Workflow getting help</span></a>
+  <a href="./chapter-10.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Layers</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-11.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Layers</span></a>
+  <a href="./chapter-11.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Exploratory data analysis</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./chapter-12.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Exploratory data analysis</span></a>
+  <a href="./chapter-12.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">communication</span></a>
   </div>
 </li>
     </ul>
@@ -227,12 +227,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul>
   <li><a href="#notes" id="toc-notes" class="nav-link active" data-scroll-target="#notes"><span class="toc-section-number">11.1</span>  Notes</a></li>
   <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions"><span class="toc-section-number">11.2</span>  Questions</a></li>
-  <li><a href="#exercise-11.2.1" id="toc-exercise-11.2.1" class="nav-link" data-scroll-target="#exercise-11.2.1"><span class="toc-section-number">11.3</span>  Exercise 11.2.1</a></li>
-  <li><a href="#exercise-11.3.1" id="toc-exercise-11.3.1" class="nav-link" data-scroll-target="#exercise-11.3.1"><span class="toc-section-number">11.4</span>  Exercise 11.3.1</a></li>
-  <li><a href="#exercise-11.4.1" id="toc-exercise-11.4.1" class="nav-link" data-scroll-target="#exercise-11.4.1"><span class="toc-section-number">11.5</span>  Exercise 11.4.1</a></li>
-  <li><a href="#exercise-11.5.1" id="toc-exercise-11.5.1" class="nav-link" data-scroll-target="#exercise-11.5.1"><span class="toc-section-number">11.6</span>  Exercise 11.5.1</a></li>
-  <li><a href="#exercise-11.6.1" id="toc-exercise-11.6.1" class="nav-link" data-scroll-target="#exercise-11.6.1"><span class="toc-section-number">11.7</span>  Exercise 11.6.1</a></li>
-  <li><a href="#exercise-11.7.1" id="toc-exercise-11.7.1" class="nav-link" data-scroll-target="#exercise-11.7.1"><span class="toc-section-number">11.8</span>  Exercise 11.7.1</a></li>
+  <li><a href="#exercise-12.3.3" id="toc-exercise-12.3.3" class="nav-link" data-scroll-target="#exercise-12.3.3"><span class="toc-section-number">11.3</span>  Exercise 12.3.3</a></li>
+  <li><a href="#exercise-12.4.1" id="toc-exercise-12.4.1" class="nav-link" data-scroll-target="#exercise-12.4.1"><span class="toc-section-number">11.4</span>  Exercise 12.4.1</a></li>
+  <li><a href="#exercise-12.5.1.1" id="toc-exercise-12.5.1.1" class="nav-link" data-scroll-target="#exercise-12.5.1.1"><span class="toc-section-number">11.5</span>  Exercise 12.5.1.1</a></li>
+  <li><a href="#exercise-12.5.2.1" id="toc-exercise-12.5.2.1" class="nav-link" data-scroll-target="#exercise-12.5.2.1"><span class="toc-section-number">11.6</span>  Exercise 12.5.2.1</a></li>
+  <li><a href="#exercise-12.5.3.1" id="toc-exercise-12.5.3.1" class="nav-link" data-scroll-target="#exercise-12.5.3.1"><span class="toc-section-number">11.7</span>  Exercise 12.5.3.1</a></li>
   </ul>
 </nav>
     </div>
@@ -241,7 +240,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Layers</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Exploratory data analysis</span></h1>
 </div>
 
 
@@ -258,7 +257,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <section id="notes" class="level2" data-number="11.1">
 <h2 data-number="11.1" class="anchored" data-anchor-id="notes"><span class="header-section-number">11.1</span> Notes</h2>
-<p>spooky new map code</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -271,394 +269,464 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(maps)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'maps'
-
-The following object is masked from 'package:purrr':
-
-    map</code></pre>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggbeeswarm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
+<p>Scatterplots become less useful as the size of your dataset grows, because points begin to overplot, and pile up into areas of uniform black (as above). You’ve already seen one way to fix the problem: using the <code>alpha</code> aesthetic to add transparency</p>
+<p>But using transparency can be challenging for very large datasets. Another solution is to use bin. Previously you used <a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html"><code>geom_histogram()</code></a> and <a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html"><code>geom_freqpoly()</code></a> to bin in one dimension. Now you’ll learn how to use <a href="https://ggplot2.tidyverse.org/reference/geom_bin_2d.html"><code>geom_bin2d()</code></a> and <a href="https://ggplot2.tidyverse.org/reference/geom_hex.html"><code>geom_hex()</code></a> to bin in two dimensions.</p>
+<p>geom_bin2d() and <a href="https://ggplot2.tidyverse.org/reference/geom_hex.html"><code>geom_hex()</code></a> divide the coordinate plane into 2d bins and then use a fill color to display how many points fall into each bin. <a href="https://ggplot2.tidyverse.org/reference/geom_bin_2d.html"><code>geom_bin2d()</code></a> creates rectangular bins. <a href="https://ggplot2.tidyverse.org/reference/geom_hex.html"><code>geom_hex()</code></a> creates hexagonal bins. You will need to install the hexbin package to use <a href="https://ggplot2.tidyverse.org/reference/geom_hex.html"><code>geom_hex()</code></a>.</p>
+<p>Heatmaply package and seriation package:</p>
+<p>If the categorical variables are unordered, you might want to use the seriation package to simultaneously reorder the rows and columns in order to more clearly reveal interesting patterns. For larger plots, you might want to try the heatmaply package, which creates interactive plots.</p>
+<p>Another approach for exploring the relationship between these variables is computing the counts with dplyr:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>nz <span class="ot">&lt;-</span> <span class="fu">map_data</span>(<span class="st">"nz"</span>)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(nz, <span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat, <span class="at">group =</span> group)) <span class="sc">+</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_polygon</span>(<span class="at">fill =</span> <span class="st">"white"</span>, <span class="at">color =</span> <span class="st">"black"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="chapter-11_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>diamonds <span class="sc">|&gt;</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(color, cut)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 35 × 3
+   color cut           n
+   &lt;ord&gt; &lt;ord&gt;     &lt;int&gt;
+ 1 D     Fair        163
+ 2 D     Good        662
+ 3 D     Very Good  1513
+ 4 D     Premium    1603
+ 5 D     Ideal      2834
+ 6 E     Fair        224
+ 7 E     Good        933
+ 8 E     Very Good  2400
+ 9 E     Premium    2337
+10 E     Ideal      3903
+# … with 25 more rows</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(nz, <span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat, <span class="at">group =</span> group)) <span class="sc">+</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_polygon</span>(<span class="at">fill =</span> <span class="st">"white"</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_quickmap</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="chapter-11_files/figure-html/unnamed-chunk-2-2.png" class="img-fluid" width="672"></p>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # A tibble: 35 × 3</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   color cut           n</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   &lt;ord&gt; &lt;ord&gt;     &lt;int&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 1 D     Fair        163</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 2 D     Good        662</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 3 D     Very Good  1513</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 4 D     Premium    1603</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 5 D     Ideal      2834</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 6 E     Fair        224</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; # … with 29 more rows</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<p>better for showing proportions in this way</p>
+<p>Then visualize with <a href="https://ggplot2.tidyverse.org/reference/geom_tile.html"><code>geom_tile()</code></a> and the fill aesthetic:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> cut, <span class="at">fill =</span> clarity)) <span class="sc">+</span> </span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>diamonds <span class="sc">|&gt;</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(color, cut) <span class="sc">|&gt;</span>  </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> color, <span class="at">y =</span> cut)) <span class="sc">+</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="fu">aes</span>(<span class="at">fill =</span> n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="chapter-11_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>coloring bar chart</p>
+<p>To visualize the covariation between categorical variables, you’ll need to count the number of observations for each combination of levels of these categorical variables. One way to do that is to rely on the built-in <code>geom_count()</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> cut, <span class="at">color =</span> cut)) <span class="sc">+</span> </span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> cut, <span class="at">y =</span> color)) <span class="sc">+</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="chapter-11_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> cut, <span class="at">fill =</span> cut)) <span class="sc">+</span> </span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="chapter-11_files/figure-html/unnamed-chunk-4-2.png" class="img-fluid" width="672"></p>
 </div>
-</div>
-<p>facet</p>
+<p>Instead, we recommend replacing the unusual values with missing values. The easiest way to do this is to use <a href="https://dplyr.tidyverse.org/reference/mutate.html"><code>mutate()</code></a> to replace the variable with a modified copy. You can use the <a href="https://dplyr.tidyverse.org/reference/if_else.html"><code>if_else()</code></a> function to replace unusual values with <code>NA</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span> </span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(drv <span class="sc">~</span> cyl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="chapter-11_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>diamonds <span class="sc">|&gt;</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">y =</span> <span class="fu">if_else</span>(y <span class="sc">&lt;</span> <span class="dv">3</span> <span class="sc">|</span> y <span class="sc">&gt;</span> <span class="dv">20</span>, <span class="cn">NA</span>, y))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 53,940 × 10
+   carat cut       color clarity depth table price     x     y     z
+   &lt;dbl&gt; &lt;ord&gt;     &lt;ord&gt; &lt;ord&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1  0.23 Ideal     E     SI2      61.5    55   326  3.95  3.98  2.43
+ 2  0.21 Premium   E     SI1      59.8    61   326  3.89  3.84  2.31
+ 3  0.23 Good      E     VS1      56.9    65   327  4.05  4.07  2.31
+ 4  0.29 Premium   I     VS2      62.4    58   334  4.2   4.23  2.63
+ 5  0.31 Good      J     SI2      63.3    58   335  4.34  4.35  2.75
+ 6  0.24 Very Good J     VVS2     62.8    57   336  3.94  3.96  2.48
+ 7  0.24 Very Good I     VVS1     62.3    57   336  3.95  3.98  2.47
+ 8  0.26 Very Good H     SI1      61.9    55   337  4.07  4.11  2.53
+ 9  0.22 Fair      E     VS2      65.1    61   337  3.87  3.78  2.49
+10  0.23 Very Good H     VS1      59.4    61   338  4     4.05  2.39
+# … with 53,930 more rows</code></pre>
 </div>
 </div>
-<p>different types of smooth line plots</p>
+<p>coord_cartesian() zoom into y</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy, <span class="at">shape =</span> drv)) <span class="sc">+</span> </span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> y)) <span class="sc">+</span> </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">50</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="chapter-11_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy, <span class="at">linetype =</span> drv)) <span class="sc">+</span> </span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
-</div>
-<div class="cell-output-display">
-<p><img src="chapter-11_files/figure-html/unnamed-chunk-6-2.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<p>geom ridge</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggridges)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> drv, <span class="at">fill =</span> drv, <span class="at">color =</span> drv)) <span class="sc">+</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_density_ridges</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Picking joint bandwidth of 1.28</code></pre>
-</div>
-<div class="cell-output-display">
-<p><img src="chapter-11_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
-</div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Picking joint bandwidth of 1.28</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="questions" class="level2" data-number="11.2">
 <h2 data-number="11.2" class="anchored" data-anchor-id="questions"><span class="header-section-number">11.2</span> Questions</h2>
 </section>
-<section id="exercise-11.2.1" class="level2" data-number="11.3">
-<h2 data-number="11.3" class="anchored" data-anchor-id="exercise-11.2.1"><span class="header-section-number">11.3</span> Exercise 11.2.1</h2>
-<ol type="1">
-<li>Create a scatterplot of <code>hwy</code> vs.&nbsp;<code>displ</code> where the points are pink filled in triangles.</li>
-</ol>
+<section id="exercise-12.3.3" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="exercise-12.3.3"><span class="header-section-number">11.3</span> Exercise 12.3.3</h2>
+<p>1.Explore the distribution of each of the <code>x</code>, <code>y</code>, and <code>z</code> variables in <code>diamonds</code>. What do you learn? Think about a diamond and how you might decide which dimension is the length, width, and depth.</p>
+<p>look up help ?diamonds</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg,<span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> displ)) <span class="sc">+</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"pink"</span>,<span class="at">shape =</span> <span class="dv">17</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> x , <span class="at">y =</span> y)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="chapter-11_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>x is the length, y is the width, z is the depth</p>
+<p>2.Explore the distribution of <code>price</code>. Do you discover anything unusual or surprising? (Hint: Carefully think about the <code>binwidth</code> and make sure you try a wide range of values.)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> price)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">2000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="chapter-11_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>2.Why did the following code not result in a plot with blue points?</p>
+<p>3.How many diamonds are 0.99 carat? How many are 1 carat? What do you think is the cause of the difference?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg) <span class="sc">+</span> </span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy,<span class="at">color =</span> <span class="st">"blue"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> carat)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> .<span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="chapter-11_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>4.Compare and contrast <a href="https://ggplot2.tidyverse.org/reference/coord_cartesian.html"><code>coord_cartesian()</code></a> vs.&nbsp;<a href="https://ggplot2.tidyverse.org/reference/lims.html"><code>xlim()</code></a> or <a href="https://ggplot2.tidyverse.org/reference/lims.html"><code>ylim()</code></a> when zooming in on a histogram. What happens if you leave <code>binwidth</code> unset? What happens if you try and zoom so only half a bar shows?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co">#fixed version</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg,<span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"blue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> carat)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> .<span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">50</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="chapter-11_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
 </div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> carat)) <span class="sc">+</span> <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> .<span class="dv">1</span>) <span class="sc">+</span> </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">50</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="chapter-11_files/figure-html/unnamed-chunk-10-2.png" class="img-fluid" width="672"></p>
 </div>
-<p>3.What does the <code>stroke</code> aesthetic do? What shapes does it work with? (Hint: use <a href="https://ggplot2.tidyverse.org/reference/geom_point.html"><code>?geom_point</code></a>)</p>
-<p>stroke controls the size of the stroke for shapes 21-24</p>
-<p>4.What happens if you map an aesthetic to something other than a variable name, like <code>aes(color = displ &lt; 5)</code>? Note, you’ll also need to specify x and y.</p>
-<p>it seperates the displ lower than 5</p>
+</div>
+<p>so it looks like when you use the xlim it zooms out but when you use the ylim it zooms in</p>
+</section>
+<section id="exercise-12.4.1" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="exercise-12.4.1"><span class="header-section-number">11.4</span> Exercise 12.4.1</h2>
+<p>1.What happens to missing values in a histogram? What happens to missing values in a bar chart? Why is there a difference in how missing values are handled in histograms and bar charts?</p>
+<p>the missing values are removed with a warning</p>
+<p>2.What does <code>na.rm = TRUE</code> do in <a href="https://rdrr.io/r/base/mean.html"><code>mean()</code></a> and <a href="https://rdrr.io/r/base/sum.html"><code>sum()</code></a>?</p>
+<p>for mean it determines whether na’s should be removed or not and for sum should na values be removed and certain other values</p>
+</section>
+<section id="exercise-12.5.1.1" class="level2" data-number="11.5">
+<h2 data-number="11.5" class="anchored" data-anchor-id="exercise-12.5.1.1"><span class="header-section-number">11.5</span> Exercise 12.5.1.1</h2>
+<p>1.Use what you’ve learned to improve the visualization of the departure times of cancelled vs.&nbsp;non-cancelled flights.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg,<span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> displ,<span class="at">color =</span> displ <span class="sc">&lt;</span> <span class="dv">5</span>)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>canceled_flights <span class="ot">&lt;-</span> nycflights13<span class="sc">::</span>flights <span class="sc">|&gt;</span> </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">cancelled =</span> <span class="fu">is.na</span>(dep_time),</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">sched_hour =</span> sched_dep_time <span class="sc">%/%</span> <span class="dv">100</span>,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">sched_min =</span> sched_dep_time <span class="sc">%%</span> <span class="dv">100</span>,</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">sched_dep_time =</span> sched_hour <span class="sc">+</span> (sched_min <span class="sc">/</span> <span class="dv">60</span>)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  ) </span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(canceled_flights,<span class="fu">aes</span>(<span class="at">x =</span> cancelled)) <span class="sc">+</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="chapter-11_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section>
-<section id="exercise-11.3.1" class="level2" data-number="11.4">
-<h2 data-number="11.4" class="anchored" data-anchor-id="exercise-11.3.1"><span class="header-section-number">11.4</span> Exercise 11.3.1</h2>
-<ol type="1">
-<li>What geom would you use to draw a line chart? A boxplot? A histogram? An area chart?</li>
-</ol>
-<p>geom_smooth,geom_boxplot,geom_histogram,geom_area</p>
-<p>2.Earlier in this chapter we used <code>show.legend</code> without explaining it:\</p>
+<p>2.What variable in the diamonds dataset is most important for predicting the price of a diamond? How is that variable correlated with cut? Why does the combination of those two relationships lead to lower quality diamonds being more expensive?</p>
+<p>i would say maybe clarity or just straight up price, i think because the lower quality diamonds correspond to people buying them who don’t really know about diamonds or don’t care about the quality,theres alot more lower quality diamonds than higher quality</p>
+<p>?diamonds</p>
+<p>3.Instead of exchanging the x and y variables, add <a href="https://ggplot2.tidyverse.org/reference/coord_flip.html"><code>coord_flip()</code></a> as a new layer to the vertical boxplot to create a horizontal one. How does this compare to using exchanging the variables?</p>
+<p>it switching the x and y its alot faster</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">color =</span> drv), <span class="at">show.legend =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> hwy, <span class="at">y =</span> <span class="fu">fct_reorder</span>(class, hwy, median))) <span class="sc">+</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span> <span class="fu">coord_flip</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="chapter-11_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>What does <code>show.legend = FALSE</code> do here? What happens if you remove it? Why do you think we used it earlier?</p>
-<p>it takes away the legend on the side,if you remove it,it will show the legend</p>
-<p>3.What does the <code>se</code> argument to <a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html"><code>geom_smooth()</code></a> do?</p>
-<p>it displays the confidence interval around the line on the chart</p>
-<p>4.Recreate the R code necessary to generate the following graphs. Note that wherever a categorical variable is used in the plot, it’s <code>drv</code>.</p>
+<p>4.One problem with boxplots is that they were developed in an era of much smaller datasets and tend to display a prohibitively large number of “outlying values”. One approach to remedy this problem is the letter value plot. Install the lvplot package, and try using <code>geom_lv()</code> to display the distribution of price vs.&nbsp;cut. What do you learn? How do you interpret the plots?</p>
+<p>my version of r can’t get this</p>
+<p>5.Compare and contrast <a href="https://ggplot2.tidyverse.org/reference/geom_violin.html"><code>geom_violin()</code></a> with a faceted <a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html"><code>geom_histogram()</code></a>, or a colored <a href="https://ggplot2.tidyverse.org/reference/geom_histogram.html"><code>geom_freqpoly()</code></a>. What are the pros and cons of each method?</p>
+<p>geom_violin shows a basic understanding of the amount of diamonds while geom_histogram shows the further outliers better and where they are and geom_freqpoly shows the count better</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds,<span class="fu">aes</span>(<span class="at">x =</span> price, <span class="at">y =</span> clarity)) <span class="sc">+</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_violin</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="chapter-11_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>,<span class="fu">aes</span>(<span class="at">shape =</span> drv))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds,<span class="fu">aes</span>(<span class="at">x =</span> price)) <span class="sc">+</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>() <span class="sc">+</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>clarity, <span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">scales =</span> <span class="st">"free_y"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning in geom_smooth(se = FALSE, aes(shape = drv)): Ignoring unknown
-aesthetics: shape</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 </div>
 <div class="cell-output-display">
 <p><img src="chapter-11_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
 </div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; `stat_bin()` using `bins = 30`. Pick better value with `binwidth`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> drv)) <span class="sc">+</span> </span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>,<span class="fu">aes</span>(<span class="at">shape =</span> drv,<span class="at">color =</span> drv))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds,<span class="fu">aes</span>(<span class="at">x =</span> price, <span class="at">color =</span> clarity)) <span class="sc">+</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_freqpoly</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning in geom_smooth(se = FALSE, aes(shape = drv, color = drv)): Ignoring
-unknown aesthetics: shape</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 </div>
 <div class="cell-output-display">
 <p><img src="chapter-11_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="672"></p>
 </div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>6.If you have a small dataset, it’s sometimes useful to use <a href="https://ggplot2.tidyverse.org/reference/geom_jitter.html"><code>geom_jitter()</code></a> to see the relationship between a continuous and categorical variable. The ggbeeswarm package provides a number of methods similar to <a href="https://ggplot2.tidyverse.org/reference/geom_jitter.html"><code>geom_jitter()</code></a>. List them and briefly describe what each one does</p>
+<p>so geom_beeswarm makes it so you have more control over overplotting datasets, while geom_jitter to me seems like just a default that you can use on the go but if you do want more customization ggbeeswarm is better for handling overplotting</p>
+</section>
+<section id="exercise-12.5.2.1" class="level2" data-number="11.6">
+<h2 data-number="11.6" class="anchored" data-anchor-id="exercise-12.5.2.1"><span class="header-section-number">11.6</span> Exercise 12.5.2.1</h2>
+<p>1.How could you rescale the count dataset above to more clearly show the distribution of cut within color, or color within cut?</p>
+<p>i can use this code from earlier that shows exactly that</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> drv)) <span class="sc">+</span> </span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>,<span class="fu">aes</span>(<span class="at">shape =</span> drv,<span class="at">linetype =</span> drv))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in geom_smooth(se = FALSE, aes(shape = drv, linetype = drv)): Ignoring
-unknown aesthetics: shape</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> cut, <span class="at">y =</span> color)) <span class="sc">+</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_count</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="chapter-11_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>2.How does the segmented bar chart change if color is mapped to the <code>x</code> aesthetic and <code>cut</code> is mapped to the <code>fill</code> aesthetic? Calculate the counts that fall into each of the segments.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">shape =</span> <span class="st">"circle open"</span>, <span class="at">color =</span> drv))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">count</span>(diamonds,color,cut)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 35 × 3
+   color cut           n
+   &lt;ord&gt; &lt;ord&gt;     &lt;int&gt;
+ 1 D     Fair        163
+ 2 D     Good        662
+ 3 D     Very Good  1513
+ 4 D     Premium    1603
+ 5 D     Ideal      2834
+ 6 E     Fair        224
+ 7 E     Good        933
+ 8 E     Very Good  2400
+ 9 E     Premium    2337
+10 E     Ideal      3903
+# … with 25 more rows</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a> <span class="fu">ggplot</span>(diamonds,<span class="fu">aes</span>( <span class="at">x =</span> color, <span class="at">fill =</span> cut)) <span class="sc">+</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="chapter-11_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
+<p>3.Use <a href="https://ggplot2.tidyverse.org/reference/geom_tile.html"><code>geom_tile()</code></a> together with dplyr to explore how average flight delays vary by destination and month of year. What makes the plot difficult to read? How could you improve it?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(nycflights13<span class="sc">::</span>flights)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 336,776
+Columns: 19
+$ year           &lt;int&gt; 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2013, 2…
+$ month          &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
+$ day            &lt;int&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
+$ dep_time       &lt;int&gt; 517, 533, 542, 544, 554, 554, 555, 557, 557, 558, 558, …
+$ sched_dep_time &lt;int&gt; 515, 529, 540, 545, 600, 558, 600, 600, 600, 600, 600, …
+$ dep_delay      &lt;dbl&gt; 2, 4, 2, -1, -6, -4, -5, -3, -3, -2, -2, -2, -2, -2, -1…
+$ arr_time       &lt;int&gt; 830, 850, 923, 1004, 812, 740, 913, 709, 838, 753, 849,…
+$ sched_arr_time &lt;int&gt; 819, 830, 850, 1022, 837, 728, 854, 723, 846, 745, 851,…
+$ arr_delay      &lt;dbl&gt; 11, 20, 33, -18, -25, 12, 19, -14, -8, 8, -2, -3, 7, -1…
+$ carrier        &lt;chr&gt; "UA", "UA", "AA", "B6", "DL", "UA", "B6", "EV", "B6", "…
+$ flight         &lt;int&gt; 1545, 1714, 1141, 725, 461, 1696, 507, 5708, 79, 301, 4…
+$ tailnum        &lt;chr&gt; "N14228", "N24211", "N619AA", "N804JB", "N668DN", "N394…
+$ origin         &lt;chr&gt; "EWR", "LGA", "JFK", "JFK", "LGA", "EWR", "EWR", "LGA",…
+$ dest           &lt;chr&gt; "IAH", "IAH", "MIA", "BQN", "ATL", "ORD", "FLL", "IAD",…
+$ air_time       &lt;dbl&gt; 227, 227, 160, 183, 116, 150, 158, 53, 140, 138, 149, 1…
+$ distance       &lt;dbl&gt; 1400, 1416, 1089, 1576, 762, 719, 1065, 229, 944, 733, …
+$ hour           &lt;dbl&gt; 5, 5, 5, 5, 6, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 5, 6, 6, 6…
+$ minute         &lt;dbl&gt; 15, 29, 40, 45, 0, 58, 0, 0, 0, 0, 0, 0, 0, 0, 0, 59, 0…
+$ time_hour      &lt;dttm&gt; 2013-01-01 05:00:00, 2013-01-01 05:00:00, 2013-01-01 0…</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>nycflights13<span class="sc">::</span>flights <span class="sc">%&gt;%</span> <span class="fu">summarise</span>(dest,month,year) <span class="sc">%&gt;%</span> </span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(dest,month)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Returning more (or less) than 1 row per `summarise()` group was deprecated in
+dplyr 1.1.0.
+ℹ Please use `reframe()` instead.
+ℹ When switching from `summarise()` to `reframe()`, remember that `reframe()`
+  always returns an ungrouped data frame and adjust accordingly.</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 336,776 × 3
+# Groups:   dest, month [1,113]
+   dest  month  year
+   &lt;chr&gt; &lt;int&gt; &lt;int&gt;
+ 1 IAH       1  2013
+ 2 IAH       1  2013
+ 3 MIA       1  2013
+ 4 BQN       1  2013
+ 5 ATL       1  2013
+ 6 ORD       1  2013
+ 7 FLL       1  2013
+ 8 IAD       1  2013
+ 9 MCO       1  2013
+10 ORD       1  2013
+# … with 336,766 more rows</code></pre>
+</div>
+</div>
 </section>
-<section id="exercise-11.4.1" class="level2" data-number="11.5">
-<h2 data-number="11.5" class="anchored" data-anchor-id="exercise-11.4.1"><span class="header-section-number">11.5</span> Exercise 11.4.1</h2>
-<p>1.What happens if you facet on a continuous variable?</p>
-<p>this is what google says:</p>
-<p><strong>You’ll get one row or column for each unique value of the variable</strong></p>
-<p>2.What do the empty cells in plot with <code>facet_grid(drv ~ cyl)</code> mean? How do they relate to this plot?</p>
-<p>means there was no data in that area i assume</p>
+<section id="exercise-12.5.3.1" class="level2" data-number="11.7">
+<h2 data-number="11.7" class="anchored" data-anchor-id="exercise-12.5.3.1"><span class="header-section-number">11.7</span> Exercise 12.5.3.1</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg) <span class="sc">+</span> </span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> drv, <span class="at">y =</span> cyl)) <span class="sc">+</span></span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(drv <span class="sc">~</span> cyl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="chapter-11_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid" width="672"></p>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>smaller <span class="ot">&lt;-</span> diamonds <span class="sc">|&gt;</span> </span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(carat <span class="sc">&lt;</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<p>3.What plots does the following code make? What does <code>.</code> do?</p>
-<p>It means “everything”, another way of saying don’t facet across columns because we’re not diving up the data by a variable’s levels across columns. And in the second case it’s across rows</p>
+<p>1.Instead of summarizing the conditional distribution with a boxplot, you could use a frequency polygon. What do you need to consider when using <a href="https://ggplot2.tidyverse.org/reference/cut_interval.html"><code>cut_width()</code></a> vs.&nbsp;<a href="https://ggplot2.tidyverse.org/reference/cut_interval.html"><code>cut_number()</code></a>? How does that impact a visualization of the 2d distribution of <code>carat</code> and <code>price</code>?</p>
+<p>if you want to use cut_width know you r datas values,if you use cut_number know your sample size</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg) <span class="sc">+</span> </span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span></span>
-<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(drv <span class="sc">~</span> .)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="chapter-11_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid" width="672"></p>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># visualize price binning by carat, cut_width()</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(smaller, <span class="fu">aes</span>(<span class="at">x =</span> price, <span class="at">y =</span> ..density..,)) <span class="sc">+</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_freqpoly</span>(<span class="fu">aes</span>(<span class="at">color =</span> <span class="fu">cut_width</span>(carat, <span class="fl">0.5</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: The dot-dot notation (`..density..`) was deprecated in ggplot2 3.4.0.
+ℹ Please use `after_stat(density)` instead.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg) <span class="sc">+</span> </span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span></span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(. <span class="sc">~</span> cyl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="chapter-11_files/figure-html/unnamed-chunk-19-2.png" class="img-fluid" width="672"></p>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 </div>
-</div>
-<p>4.Take the first faceted plot in this section:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg) <span class="sc">+</span> </span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span> </span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> class, <span class="at">nrow =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="chapter-11_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid" width="672"></p>
 </div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># visualize price binning by carat, cut_number(), 10 bins</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(smaller, <span class="fu">aes</span>(<span class="at">x =</span> price, <span class="at">y =</span> ..density..,)) <span class="sc">+</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_freqpoly</span>(<span class="fu">aes</span>(<span class="at">color =</span> <span class="fu">cut_number</span>(carat, <span class="dv">10</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 </div>
-<p>What are the advantages to using faceting instead of the color aesthetic? What are the disadvantages? How might the balance change if you had a larger dataset?</p>
-<p>the advantages of faceting is seeing each subgroup apart from each other to see more clearly. the disadvantages are not seeing the data overlap with each other.im pretty sure they’ll just be more points.</p>
-<p>5.Read <a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html"><code>?facet_wrap</code></a>. What does <code>nrow</code> do? What does <code>ncol</code> do? What other options control the layout of the individual panels? Why doesn’t <a href="https://ggplot2.tidyverse.org/reference/facet_grid.html"><code>facet_grid()</code></a> have <code>nrow</code> and <code>ncol</code> argument</p>
-<p>you can choose the number of rows and cols with nrow and ncol.like strink and as.table etc.</p>
-<p>for the same reason facet wrap does</p>
-<p>6.Which of the following two plots makes it easier to compare engine size (<code>displ</code>) across cars with different drive trains? What does this say about when to place a faceting variable across rows or columns?</p>
-<p>the second plot makes it easier. use which ever suits best</p>
+<div class="cell-output-display">
+<p><img src="chapter-11_files/figure-html/unnamed-chunk-20-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>2.Visualize the distribution of <code>carat</code>, partitioned by <code>price</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg) <span class="sc">+</span> </span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span> </span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(drv <span class="sc">~</span> .)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="chapter-11_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid" width="672"></p>
-</div>
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg) <span class="sc">+</span> </span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span> </span>
-<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(. <span class="sc">~</span> drv)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="chapter-11_files/figure-html/unnamed-chunk-21-2.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<p>7.Recreate this plot using <a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html"><code>facet_wrap()</code></a> instead of <a href="https://ggplot2.tidyverse.org/reference/facet_grid.html"><code>facet_grid()</code></a>. How do the positions of the facet labels change?</p>
-<p>facet grid chose to use rows instead of columns in the first code</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg) <span class="sc">+</span> </span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span></span>
-<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(drv <span class="sc">~</span> .)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="chapter-11_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg) <span class="sc">+</span> </span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span></span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>( <span class="sc">~</span> drv)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="chapter-11_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</section>
-<section id="exercise-11.5.1" class="level2" data-number="11.6">
-<h2 data-number="11.6" class="anchored" data-anchor-id="exercise-11.5.1"><span class="header-section-number">11.6</span> Exercise 11.5.1</h2>
-<p>1.What is the default geom associated with <a href="https://ggplot2.tidyverse.org/reference/stat_summary.html"><code>stat_summary()</code></a>? How could you rewrite the previous plot to use that geom function instead of the stat function?</p>
-<p>i believe its geom_point</p>
-<p>2.What does <a href="https://ggplot2.tidyverse.org/reference/geom_bar.html"><code>geom_col()</code></a> do? How is it different from <a href="https://ggplot2.tidyverse.org/reference/geom_bar.html"><code>geom_bar()</code></a>?</p>
-<p>type ?geom_col tells you in the description</p>
-<p>3.Most geoms and stats come in pairs that are almost always used in concert. Read through the documentation and make a list of all the pairs. What do they have in common?</p>
-<p>alot of the geoms use stat = identity and some use bin and count</p>
-<p>4.What variables does <a href="https://ggplot2.tidyverse.org/reference/geom_smooth.html"><code>stat_smooth()</code></a> compute? What parameters control its behavior?</p>
-<p>stat_smooth () provides the following variables, some of which depend on the orientation: <strong>y or x predicted value</strong></p>
-<p>5.In our proportion bar chart, we need to set <code>group = 1</code>. Why? In other words, what is the problem with these two graphs?</p>
-<p>these graphs don’t show any information</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> cut, <span class="at">y =</span> <span class="fu">after_stat</span>(prop))) <span class="sc">+</span> </span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="chapter-11_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid" width="672"></p>
-</div>
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> cut, <span class="at">fill =</span> color, <span class="at">y =</span> <span class="fu">after_stat</span>(prop))) <span class="sc">+</span> </span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="chapter-11_files/figure-html/unnamed-chunk-24-2.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<p>i think i fixed them</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> cut)) <span class="sc">+</span> </span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="chapter-11_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid" width="672"></p>
-</div>
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> cut, <span class="at">fill =</span> color)) <span class="sc">+</span> </span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="chapter-11_files/figure-html/unnamed-chunk-25-2.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-</section>
-<section id="exercise-11.6.1" class="level2" data-number="11.7">
-<h2 data-number="11.7" class="anchored" data-anchor-id="exercise-11.6.1"><span class="header-section-number">11.7</span> Exercise 11.6.1</h2>
-<p>1.What is the problem with this plot? How could you improve it?</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> cty, <span class="at">y =</span> hwy)) <span class="sc">+</span> </span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="chapter-11_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid" width="672"></p>
-</div>
-</div>
-<p>2.What parameters to <a href="https://ggplot2.tidyverse.org/reference/geom_jitter.html"><code>geom_jitter()</code></a> control the amount of jittering?</p>
-<p>To adjust the amount of jittering along the x and y axes, one can explicitly set the position adjustment: geom_jitter <strong>(data= d, mapping = aes (x =system, y = runtime), size =1, position = position_jitter (width =0.3, height =0))</strong></p>
-<p>3.Compare and contrast <a href="https://ggplot2.tidyverse.org/reference/geom_jitter.html"><code>geom_jitter()</code></a> with <a href="https://ggplot2.tidyverse.org/reference/geom_count.html"><code>geom_count()</code></a>.</p>
-<p>they both makes it easier to map out discrete data and helps show overlapping data for plots</p>
-<p>4.What’s the default position adjustment for <a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html"><code>geom_boxplot()</code></a>? Create a visualization of the <code>mpg</code> dataset that demonstrates it.</p>
-<p>the default is dodge2</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg, <span class="fu">aes</span>(<span class="at">x =</span> cty, <span class="at">y =</span> displ)) <span class="sc">+</span></span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">position =</span> <span class="st">"dodge2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> price, <span class="at">y =</span> carat)) <span class="sc">+</span> </span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Continuous x aesthetic
 ℹ did you forget `aes(group = ...)`?</code></pre>
 </div>
 <div class="cell-output-display">
+<p><img src="chapter-11_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>3.How does the price distribution of very large diamonds compare to small diamonds? Is it as you expect, or does it surprise you?</p>
+<p>its not what i expect even the large diamonds are the same price as smaller diamonds</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds,<span class="fu">aes</span>(<span class="at">x =</span> carat,<span class="at">y =</span> price)) <span class="sc">+</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="chapter-11_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>4.Combine two of the techniques you’ve learned to visualize the combined distribution of cut, carat, and price.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds,<span class="fu">aes</span>(<span class="at">x =</span> price,<span class="at">color =</span> cut,<span class="at">fill =</span> cut)) <span class="sc">+</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_freqpoly</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="chapter-11_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds,<span class="fu">aes</span>(<span class="at">x =</span> carat,<span class="at">color =</span> cut,<span class="at">fill =</span> cut)) <span class="sc">+</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_freqpoly</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="chapter-11_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>5.Two dimensional plots reveal outliers that are not visible in one dimensional plots. For example, some points in the following plot have an unusual combination of <code>x</code> and <code>y</code> values, which makes the points outliers even though their <code>x</code> and <code>y</code> values appear normal when examined separately. Why is a scatterplot a better display than a binned plot for this case?</p>
+<p>because this scatterplot shows outliers and binned plots don’t</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>diamonds <span class="sc">|&gt;</span> </span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(x <span class="sc">&gt;=</span> <span class="dv">4</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_cartesian</span>(<span class="at">xlim =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">11</span>), <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">11</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="chapter-11_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>diamonds <span class="sc">|&gt;</span> </span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(x <span class="sc">&gt;=</span> <span class="dv">4</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> x)) <span class="sc">+</span></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="chapter-11_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>6.Instead of creating boxes of equal width with <a href="https://ggplot2.tidyverse.org/reference/cut_interval.html"><code>cut_width()</code></a>, we could create boxes that contain roughly equal number of points with <a href="https://ggplot2.tidyverse.org/reference/cut_interval.html"><code>cut_number()</code></a>. What are the advantages and disadvantages of this approach?</p>
+<p>if you want to control the width you use cut_width, if you want to choose the number of bins use cut_number</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(smaller, <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price)) <span class="sc">+</span> </span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">group =</span> <span class="fu">cut_number</span>(carat, <span class="dv">20</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
 <p><img src="chapter-11_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid" width="672"></p>
 </div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>smaller <span class="sc">%&gt;%</span> </span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">carat_group =</span> <span class="fu">cut_number</span>(carat,<span class="dv">20</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(carat_group)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 20 × 2
+   carat_group     n
+   &lt;fct&gt;       &lt;int&gt;
+ 1 [0.2,0.3]    4203
+ 2 (0.3,0.31]   2249
+ 3 (0.31,0.32]  1840
+ 4 (0.32,0.35]  2766
+ 5 (0.35,0.4]   3333
+ 6 (0.4,0.42]   2088
+ 7 (0.42,0.5]   2453
+ 8 (0.5,0.53]   2653
+ 9 (0.53,0.6]   2863
+10 (0.6,0.7]    2714
+11 (0.7,0.73]   2550
+12 (0.73,0.9]   3890
+13 (0.9,1]      2836
+14 (1,1.01]     2242
+15 (1.01,1.04]  1881
+16 (1.04,1.13]  2692
+17 (1.13,1.23]  2584
+18 (1.23,1.51]  3468
+19 (1.51,1.7]   1950
+20 (1.7,2.8]    2645</code></pre>
 </div>
-</section>
-<section id="exercise-11.7.1" class="level2" data-number="11.8">
-<h2 data-number="11.8" class="anchored" data-anchor-id="exercise-11.7.1"><span class="header-section-number">11.8</span> Exercise 11.7.1</h2>
-<p>1.Turn a stacked bar chart into a pie chart using <a href="https://ggplot2.tidyverse.org/reference/coord_polar.html"><code>coord_polar()</code></a>.</p>
+</div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(diamonds, <span class="fu">aes</span>(<span class="at">x =</span> cut, <span class="at">fill =</span> clarity)) <span class="sc">+</span> </span>
-<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>)  <span class="sc">+</span> <span class="fu">coord_polar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(smaller, <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price)) <span class="sc">+</span> </span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">group =</span> <span class="fu">cut_width</span>(carat, .<span class="dv">1</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="chapter-11_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid" width="672"></p>
 </div>
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>smaller <span class="sc">%&gt;%</span> </span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">carat_group =</span> <span class="fu">cut_width</span>(carat,.<span class="dv">1</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(carat_group)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 27 × 2
+   carat_group     n
+   &lt;fct&gt;       &lt;int&gt;
+ 1 [0.15,0.25]   785
+ 2 (0.25,0.35] 10273
+ 3 (0.35,0.45]  6231
+ 4 (0.45,0.55]  5417
+ 5 (0.55,0.65]  2328
+ 6 (0.65,0.75]  5249
+ 7 (0.75,0.85]  1725
+ 8 (0.85,0.95]  2656
+ 9 (0.95,1.05]  6258
+10 (1.05,1.15]  2687
+# … with 17 more rows</code></pre>
 </div>
-<p>2.What’s the difference between <a href="https://ggplot2.tidyverse.org/reference/coord_map.html"><code>coord_quickmap()</code></a> and <a href="https://ggplot2.tidyverse.org/reference/coord_map.html"><code>coord_map()</code></a>?</p>
-<p>coord quick map sets the aspect ratio correctly for maps while coord map projects a portion of the earth onto a 2d plane so i think coord quick map is like for exact coordinates and coord map is for a bigger representation i think</p>
-<p>3.What does the plot below tell you about the relationship between city and highway mpg? Why is <a href="https://ggplot2.tidyverse.org/reference/coord_fixed.html"><code>coord_fixed()</code></a> important? What does <a href="https://ggplot2.tidyverse.org/reference/geom_abline.html"><code>geom_abline()</code></a> do?</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> mpg, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> cty, <span class="at">y =</span> hwy)) <span class="sc">+</span></span>
-<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span> </span>
-<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>() <span class="sc">+</span></span>
-<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_fixed</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="chapter-11_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid" width="672"></p>
 </div>
-</div>
-<p>this plot shows the more city miles per gallon the higher the highway mile per gallon goes,i believe coord fixed makes the plot like taller to show the information better,geom abline shows the same information only on a solid line</p>
 
 
 </section>
@@ -800,12 +868,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./chapter-10.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Workflow getting help</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Layers</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./chapter-12.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Exploratory data analysis</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">communication</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

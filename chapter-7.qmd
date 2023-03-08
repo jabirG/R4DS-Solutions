@@ -1,33 +1,11 @@
 ---
-title: "workflow style"
+title: "workflow scripts and projects"
 ---
 
 ## Notes
 
 ## Questions
 
+1.what tip from twitter did i like?
 
-
-## Exercises 7.6
-
-1.Restyle the following pipelines following the guidelines above.
-
-```{r}
-library(tidyverse)
-library(nycflights13)
-
-flights|>filter(dest=="IAH")|>group_by(year,month,day)|>summarize(n=n(),delay=mean(arr_delay,na.rm=TRUE))|>filter(n>10)
-
-flights|>filter(carrier=="UA",dest%in%c("IAH","HOU"),sched_dep_time>0900,sched_arr_time<2000)|>group_by(flight)|>summarize(delay=mean(arr_delay,na.rm=TRUE),cancelled=sum(is.na(arr_delay)),n=n())|>filter(n>10)
-```
-
-```{r}
-flights |>
-  
-  filter(dest == "IAH") |>
-  group_by(year, month, day) |> 
-  summarize(n = n(), delay = mean(arr_delay, na.rm = TRUE)) |>
-  filter(n > 10)
-  
-  
-```
+if you go to tools-global options - appearance you can change the background

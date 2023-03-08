@@ -1,13 +1,11 @@
 ---
-title: "workflow scripts and projects"
+title: "workflow getting help"
 ---
 
 ## Notes
 
+this chapter has no exercises
+
 ## Questions
 
 
-
-1.what tip from twitter did i like?
-
-if you go to tools-global options - appearance you can change the background
