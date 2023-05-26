@@ -65,8 +65,6 @@ ggplot(mpg, aes(x = hwy, y = drv, fill = drv, color = drv)) +
 #> Picking joint bandwidth of 1.28
 ```
 
-
-
 ## Solutions
 
 ## Exercise 11.2.1

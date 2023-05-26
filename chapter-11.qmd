@@ -7,6 +7,7 @@ title: "Exploratory data analysis"
 ```{r}
 library(tidyverse)
 library(ggbeeswarm)
+library(lvplot)
 ```
 
 Scatterplots become less useful as the size of your dataset grows, because points begin to overplot, and pile up into areas of uniform black (as above). You've already seen one way to fix the problem: using the `alpha` aesthetic to add transparency
@@ -55,8 +56,6 @@ ggplot(diamonds, aes(x = cut, y = color)) +
 Instead, we recommend replacing the unusual values with missing values. The easiest way to do this is to use [`mutate()`](https://dplyr.tidyverse.org/reference/mutate.html) to replace the variable with a modified copy. You can use the [`if_else()`](https://dplyr.tidyverse.org/reference/if_else.html) function to replace unusual values with `NA`:
 
 ```{r}
-
- 
 diamonds |> 
   mutate(y = if_else(y < 3 | y > 20, NA, y))
 ```
@@ -155,7 +154,10 @@ ggplot(mpg, aes(x = hwy, y = fct_reorder(class, hwy, median))) +
 
 4.One problem with boxplots is that they were developed in an era of much smaller datasets and tend to display a prohibitively large number of "outlying values". One approach to remedy this problem is the letter value plot. Install the lvplot package, and try using `geom_lv()` to display the distribution of price vs. cut. What do you learn? How do you interpret the plots?
 
-my version of r can't get this
+```{r}
+ggplot(diamonds,aes(x = cut, y = price)) +
+  geom_lv()
+```
 
 5.Compare and contrast [`geom_violin()`](https://ggplot2.tidyverse.org/reference/geom_violin.html) with a faceted [`geom_histogram()`](https://ggplot2.tidyverse.org/reference/geom_histogram.html), or a colored [`geom_freqpoly()`](https://ggplot2.tidyverse.org/reference/geom_histogram.html). What are the pros and cons of each method?
 
