@@ -1,0 +1,730 @@
+---
+title: "notes"
+author: "jabir"
+editor: visual
+---
+
+packages
+
+```{r}
+library(tidyverse)
+library(maps)
+library(ggridges)
+library(scales)
+library(lubridate)
+library(nycflights13)
+```
+
+## Chapter 2 Data Visualization
+
+`alpha` aesthetic to add transparency to the filled density curves.
+
+This aesthetic takes values between 0 (completely transparent) and 1 (completely opaque)
+
+is to split your plot into **facets**, subplots that each display one subset of the data.
+
+To facet your plot by a single variable, use [`facet_wrap()`](https://ggplot2.tidyverse.org/reference/facet_wrap.html). The first argument of [`facet_wrap()`](https://ggplot2.tidyverse.org/reference/facet_wrap.html) is a formula^[2](https://r4ds.hadley.nz/data-visualize.html#fn2)^, which you create with `~` followed by a variable name. The variable that you pass to [`facet_wrap()`](https://ggplot2.tidyverse.org/reference/facet_wrap.html) should be categorical.
+
+## Chapter 10 Layers
+
+using geom pointrange its like a boxplot
+
+```{r}
+diamonds |>
+  group_by(cut) |>
+  summarize(
+    lower = min(depth),
+    upper = max(depth),
+    midpoint = median(depth)
+  ) |>
+  ggplot(aes(x = cut, y = midpoint)) +
+  geom_pointrange(aes(ymin = lower, ymax = upper))
+```
+
+spooky new map code
+
+```{r}
+nz <- map_data("nz")
+
+ggplot(nz, aes(x = long, y = lat, group = group)) +
+  geom_polygon(fill = "white", color = "black")
+
+ggplot(nz, aes(x = long, y = lat, group = group)) +
+  geom_polygon(fill = "white", color = "black") +
+  coord_quickmap()
+```
+
+better for showing proportions in this way
+
+```{r}
+ggplot(diamonds, aes(x = cut, fill = clarity)) + 
+  geom_bar(position = "fill")
+```
+
+coloring bar chart
+
+```{r}
+ggplot(diamonds, aes(x = cut, color = cut)) + 
+  geom_bar()
+ggplot(diamonds, aes(x = cut, fill = cut)) + 
+  geom_bar()
+```
+
+facet
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy)) + 
+  geom_point() + 
+  facet_grid(drv ~ cyl)
+```
+
+different types of smooth line plots
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy, shape = drv)) + 
+  geom_smooth()
+ggplot(mpg, aes(x = displ, y = hwy, linetype = drv)) + 
+  geom_smooth()
+```
+
+geom ridge
+
+```{r}
+ggplot(mpg, aes(x = hwy, y = drv, fill = drv, color = drv)) +
+  geom_density_ridges(alpha = 0.5, show.legend = FALSE)
+#> Picking joint bandwidth of 1.28
+```
+
+## Chapter 11 Exploratory Data Analysis
+
+Scatterplots become less useful as the size of your dataset grows, because points begin to overplot, and pile up into areas of uniform black (as above). You've already seen one way to fix the problem: using the `alpha` aesthetic to add transparency
+
+But using transparency can be challenging for very large datasets. Another solution is to use bin. Previously you used [`geom_histogram()`](https://ggplot2.tidyverse.org/reference/geom_histogram.html) and [`geom_freqpoly()`](https://ggplot2.tidyverse.org/reference/geom_histogram.html) to bin in one dimension. Now you'll learn how to use [`geom_bin2d()`](https://ggplot2.tidyverse.org/reference/geom_bin_2d.html) and [`geom_hex()`](https://ggplot2.tidyverse.org/reference/geom_hex.html) to bin in two dimensions.
+
+geom_bin2d() and [`geom_hex()`](https://ggplot2.tidyverse.org/reference/geom_hex.html) divide the coordinate plane into 2d bins and then use a fill color to display how many points fall into each bin. [`geom_bin2d()`](https://ggplot2.tidyverse.org/reference/geom_bin_2d.html) creates rectangular bins. [`geom_hex()`](https://ggplot2.tidyverse.org/reference/geom_hex.html) creates hexagonal bins. You will need to install the hexbin package to use [`geom_hex()`](https://ggplot2.tidyverse.org/reference/geom_hex.html).
+
+Heatmaply package and seriation package:
+
+If the categorical variables are unordered, you might want to use the seriation package to simultaneously reorder the rows and columns in order to more clearly reveal interesting patterns. For larger plots, you might want to try the heatmaply package, which creates interactive plots.
+
+Another approach for exploring the relationship between these variables is computing the counts with dplyr:
+
+```{r}
+diamonds |> 
+  count(color, cut)
+```
+
+Then visualize with [`geom_tile()`](https://ggplot2.tidyverse.org/reference/geom_tile.html) and the fill aesthetic:
+
+```{r}
+diamonds |> 
+  count(color, cut) |>  
+  ggplot(aes(x = color, y = cut)) +
+  geom_tile(aes(fill = n))
+```
+
+To visualize the covariation between categorical variables, you'll need to count the number of observations for each combination of levels of these categorical variables. One way to do that is to rely on the built-in `geom_count()`
+
+```{r}
+ggplot(diamonds, aes(x = cut, y = color)) +
+  geom_count()
+```
+
+Instead, we recommend replacing the unusual values with missing values. The easiest way to do this is to use [`mutate()`](https://dplyr.tidyverse.org/reference/mutate.html) to replace the variable with a modified copy. You can use the [`if_else()`](https://dplyr.tidyverse.org/reference/if_else.html) function to replace unusual values with `NA`:
+
+```{r}
+diamonds |> 
+  mutate(y = if_else(y < 3 | y > 20, NA, y))
+```
+
+coord_cartesian() zoom into y
+
+```{r}
+ggplot(diamonds, aes(x = y)) + 
+  geom_histogram(binwidth = 0.5) +
+  coord_cartesian(ylim = c(0, 50))
+```
+
+## Chapter 12 Communication Notes
+
+```{r}
+presidential |>
+  mutate(id = 33 + row_number()) |>
+  ggplot(aes(x = start, y = id, color = party)) +
+  geom_point() +
+  geom_segment(aes(xend = end, yend = id)) +
+  scale_color_manual(values = c(Republican = "#E81B23", Democratic = "#00AEF3")) +
+    scale_x_date(name = "Term", breaks = seq(from = ymd("1953-01-20"), to = ymd("2021-01-20"), by = "4 years"), date_labels = "'%y") +
+scale_y_continuous(
+  name = "president",
+  breaks = 34:45,
+  labels = presidential$name
+)
+```
+
+is you want to change the legend point colors instead of everything use this
+
+i.e guide_legend and override.aes
+
+```{r}
+ggplot(diamonds, aes(x = carat, y = price)) +
+  geom_point(aes(color = cut), alpha = 1/20) +
+    guides(color = guide_legend(override.aes = list(alpha = 1) ) )
+```
+
+to manually pick the colors
+
+```{r}
+presidential |>
+  mutate(id = 33 + row_number()) |>
+  ggplot(aes(x = start, y = id, color = party)) +
+  geom_point() +
+  geom_segment(aes(xend = end, yend = id)) +
+  scale_color_manual(values = c(Republican = "#E81B23", Democratic = "#00AEF3"))
+```
+
+crazy color change
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point(aes(color = drv))
+
+ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point(aes(color = drv)) +
+  scale_color_brewer(palette = "Set1")
+```
+
+theme legend manipulation
+
+```{r}
+base <- ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point(aes(color = class))
+
+base + theme(legend.position = "right") # the default
+base + theme(legend.position = "left")
+base + 
+  theme(legend.position = "top") +
+  guides(col = guide_legend(nrow = 3))
+base + 
+  theme(legend.position = "bottom") +
+  guides(col = guide_legend(nrow = 3))
+```
+
+for percentage work
+
+```{r}
+ggplot(diamonds, aes(x = cut, fill = clarity)) +
+  geom_bar(position = "fill") +
+  scale_y_continuous(name = "Percentage", labels = label_percent())
+
+```
+
+this code is for labeling money on x axis or could change this to y axis
+
+```{r}
+# Left
+ggplot(diamonds, aes(x = price, y = cut)) +
+  geom_boxplot(alpha = 0.05) +
+  scale_x_continuous(labels = label_dollar())
+
+# Right
+ggplot(diamonds, aes(x = price, y = cut)) +
+  geom_boxplot(alpha = 0.05) +
+  scale_x_continuous(
+    labels = label_dollar(scale = 1/1000, suffix = "K"), 
+    breaks = seq(1000, 19000, by = 6000)
+  )
+```
+
+this line of code takes away y and x axis numbers and changes the names on the legend
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy, color = drv)) +
+  geom_point() +
+  scale_x_continuous(labels = NULL) +
+  scale_y_continuous(labels = NULL) +
+  scale_color_discrete(labels = c("4" = "4-wheel", "f" = "front", "r" = "rear"))
+```
+
+customizes the y axis numbers
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy, color = drv)) +
+  geom_point() +
+  scale_y_continuous(breaks = seq(15, 40, by = 5)) 
+```
+
+label a specific facet
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point(alpha = 0.1) +
+  facet_wrap(~drv) +
+  geom_text(data = mpg |> filter(drv == "f"), aes(label = drv), nudge_x = 1)
+```
+
+create a pointer in plot and explains annotate pretty well
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point() +
+  annotate(
+    geom = "label", x = 3.5, y = 38,
+    label = "Increasing engine size is \nrelated to decreasing fuel economy.",
+    hjust = "left", color = "red"
+  ) +
+  annotate(
+    geom = "segment",
+    x = 3, y = 35, xend = 5, yend = 25, color = "red",
+    arrow = arrow(type = "closed")
+  )
+```
+
+labeling plots text
+
+```{r}
+label_info <- mpg |>
+  group_by(drv) |>
+  arrange(desc(displ)) |>
+  slice_head(n = 1) |>
+  mutate(
+    drive_type = case_when(
+      drv == "f" ~ "front-wheel drive",
+      drv == "r" ~ "rear-wheel drive",
+      drv == "4" ~ "4-wheel drive"
+    )
+  ) |>
+  select(displ, hwy, drv, drive_type)
+
+label_info
+#> # A tibble: 3 × 4
+#> # Groups:   drv [3]
+#>   displ   hwy drv   drive_type       
+#>   <dbl> <int> <chr> <chr>            
+#> 1   6.5    17 4     4-wheel drive    
+#> 2   5.3    25 f     front-wheel drive
+#> 3   7      24 r     rear-wheel drive
+```
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy, color = drv)) +
+  geom_point(alpha = 0.3) +
+  geom_smooth(se = FALSE) +
+  geom_text(
+    data = label_info, 
+    aes(x = displ, y = hwy, label = drive_type),
+    fontface = "bold", size = 5, hjust = "right", vjust = "bottom"
+  ) +
+  theme(legend.position = "none")
+#> `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+```
+
+nudge and rectangle around label
+
+```{r}
+ggplot(mpg, aes(x = displ, y = hwy, color = drv)) +
+  geom_point(alpha = 0.3) +
+  geom_smooth(se = FALSE) +
+  geom_label(
+    data = label_info, 
+    aes(x = displ, y = hwy, label = drive_type),
+    fontface = "bold", size = 5, hjust = "right", alpha = 0.5, nudge_y = 2,
+  ) +
+  theme(legend.position = "none")
+#> `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+```
+
+geom_label_repel ggrepel package adjust labels for you
+
+```{r}
+library(ggrepel)
+ggplot(mpg, aes(x = displ, y = hwy, color = drv)) +
+  geom_point(alpha = 0.3) +
+  geom_smooth(se = FALSE) +
+  geom_label_repel(
+    data = label_info, 
+    aes(x = displ, y = hwy, label = drive_type),
+    fontface = "bold", size = 5, nudge_y = 2,
+  ) +
+  theme(legend.position = "none")
+#> `geom_smooth()` using method = 'loess' and formula = 'y ~ x'
+```
+
+great use of information
+
+```{r}
+potential_outliers <- mpg |>
+  filter(hwy > 40 | (hwy > 20 & displ > 5))
+  
+ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point() +
+  geom_text_repel(data = potential_outliers, aes(label = model)) +
+  geom_point(data = potential_outliers, color = "red") +
+  geom_point(data = potential_outliers, color = "red", size = 3, shape = "circle open")
+```
+
+i think you have to create a data frame everytime
+
+```{r}
+label_info <- mpg |>
+  summarize(
+    displ = max(displ),
+    hwy = max(hwy),
+    label = "Increasing engine size is \nrelated to decreasing fuel economy."
+  )
+
+ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point() +
+  geom_text(
+    data = label_info, aes(label = label), 
+    vjust = "top", hjust = "right"
+  )
+```
+
+## Chapter 13 Logical Vectors
+
+using case_when to mark tardyness on flights
+
+```{r}
+flights |> 
+  mutate(
+    status = case_when(
+      is.na(arr_delay)      ~ "cancelled",
+      arr_delay < -30       ~ "very early",
+      arr_delay < -15       ~ "early",
+      abs(arr_delay) <= 15  ~ "on time",
+      arr_delay < 60        ~ "late",
+      arr_delay < Inf       ~ "very late",
+    ),
+    .keep = "used"
+  )
+#> # A tibble: 336,776 × 2
+#>   arr_delay status 
+#>       <dbl> <chr>  
+#> 1        11 on time
+#> 2        20 late   
+#> 3        33 late   
+#> 4       -18 early  
+#> 5       -25 early  
+#> 6        12 on time
+#> # ℹ 336,770 more rows
+```
+
+using case_when to label days as holidays
+
+```{r}
+flights |>
+  mutate(holiday = case_when(
+    month == 1 & day == 1 ~ "New Years Day",
+    month == 7 & day == 4 ~ "4th of July",
+    month == 12 & day == 25 ~ "Christmas"
+  )) |>
+  mutate(yesnoholidays = case_when(
+    holiday == "New Years Day" ~ "TRUE",
+    holiday == "4th of July" ~ "TRUE",
+    holiday == "Christmas" ~ "TRUE"
+  ))
+```
+
+## Chapter 14 Numbers
+
+changing number strings into regular numbers
+
+```{r}
+x <- c("1.2", "5.6", "1e3")
+parse_double(x)
+#> [1]    1.2    5.6 1000.0
+```
+
+parse_number usually used for currency and percent
+
+```{r}
+x <- c("$1,234", "USD 3,513", "59%")
+parse_number(x)
+#> [1] 1234 3513   59
+```
+
+if you want to see the most common values using count
+
+```{r}
+flights |> count(dest, sort = TRUE)
+#> # A tibble: 105 × 2
+#>   dest      n
+#>   <chr> <int>
+#> 1 ORD   17283
+#> 2 ATL   17215
+#> 3 LAX   16174
+#> 4 BOS   15508
+#> 5 MCO   14082
+#> 6 CLT   14064
+#> # ℹ 99 more rows
+```
+
+`n_distinct(x)` counts the number of distinct (unique) values of one or more variables
+
+```{r}
+flights |> 
+  group_by(dest) |> 
+  summarize(carriers = n_distinct(carrier)) |> 
+  arrange(desc(carriers))
+#> # A tibble: 105 × 2
+#>   dest  carriers
+#>   <chr>    <int>
+#> 1 ATL          7
+#> 2 BOS          7
+#> 3 CLT          7
+#> 4 ORD          7
+#> 5 TPA          7
+#> 6 AUS          6
+#> # ℹ 99 more rows
+```
+
+You can count missing values by combining [`sum()`](https://rdrr.io/r/base/sum.html) and [`is.na()`](https://rdrr.io/r/base/NA.html). In the `flights` dataset this represents flights that are cancelled
+
+```{r}
+flights |> 
+  group_by(dest) |> 
+  summarize(n_cancelled = sum(is.na(dep_time))) 
+#> # A tibble: 105 × 2
+#>   dest  n_cancelled
+#>   <chr>       <int>
+#> 1 ABQ             0
+#> 2 ACK             0
+#> 3 ALB            20
+#> 4 ANC             0
+#> 5 ATL           317
+#> 6 AUS            21
+#> # ℹ 99 more rows
+```
+
+rounding
+
+```{r}
+round(123.456, 2)  # two digits
+#> [1] 123.46
+round(123.456, 1)  # one digit
+#> [1] 123.5
+round(123.456, -1) # round to nearest ten
+#> [1] 120
+round(123.456, -2) # round to nearest hundred
+#> [1] 100
+```
+
+floor rounds down and ceiling rounds up
+
+```{r}
+x <- 123.456
+
+floor(x)
+#> [1] 123
+ceiling(x)
+#> [1] 124
+```
+
+round using multiple
+
+```{r}
+# Round to nearest multiple of 4
+round(x / 4) * 4
+#> [1] 124
+
+# Round to nearest 0.25
+round(x / 0.25) * 0.25
+#> [1] 123.5
+```
+
+hours to minutes function
+
+```{r}
+hours2mins <- function(x) {
+  x %/% 100 * 60 + x %% 100}
+```
+
+## Chapter 15 strings
+
+It's very common for multiple variables to be crammed together into a single string. In this section, you'll learn how to use four tidyr functions to extract them:
+
+-   `df |> separate_longer_delim(col, delim)`
+
+-   `df |> separate_longer_position(col, width)`
+
+-   `df |> separate_wider_delim(col, delim, names)`
+
+-   `df |> separate_wider_position(col, widths)`
+
+If you look closely, you can see there's a common pattern here: `separate_`, then `longer` or `wider`, then `_`, then by `delim` or `position`. That's because these four functions are composed of two simpler primitives:
+
+-   Just like with [`pivot_longer()`](https://tidyr.tidyverse.org/reference/pivot_longer.html) and [`pivot_wider()`](https://tidyr.tidyverse.org/reference/pivot_wider.html), `_longer` functions make the input data frame longer by creating new rows and `_wider` functions make the input data frame wider by generating new columns.
+
+-   `delim` splits up a string with a delimiter like `", "` or `" "`; `position` splits at specified widths, like `c(3, 5, 2)`.
+
+```{r}
+df1 <- tibble(x = c("a,b,c", "d,e", "f"))
+df1 |> 
+  separate_longer_delim(x, delim = ",")
+#> # A tibble: 6 × 1
+#>   x    
+#>   <chr>
+#> 1 a    
+#> 2 b    
+#> 3 c    
+#> 4 d    
+#> 5 e    
+#> 6 f
+```
+
+```{r}
+df2 <- tibble(x = c("1211", "131", "21"))
+df2 |> 
+  separate_longer_position(x, width = 1)
+#> # A tibble: 9 × 1
+#>   x    
+#>   <chr>
+#> 1 1    
+#> 2 2    
+#> 3 1    
+#> 4 1    
+#> 5 1    
+#> 6 3    
+#> # ℹ 3 more rows
+```
+
+### **Separating into columns**
+
+```{r}
+df3 <- tibble(x = c("a10.1.2022", "b10.2.2011", "e15.1.2015"))
+df3 |> 
+  separate_wider_delim(
+    x,
+    delim = ".",
+    names = c("code", "edition", "year")
+  )
+#> # A tibble: 3 × 3
+#>   code  edition year 
+#>   <chr> <chr>   <chr>
+#> 1 a10   1       2022 
+#> 2 b10   2       2011 
+#> 3 e15   1       2015
+```
+
+If a specific piece is not useful you can use an `NA` name to omit it from the results:
+
+```{r}
+df3 |> 
+  separate_wider_delim(
+    x,
+    delim = ".",
+    names = c("code", NA, "year")
+  )
+#> # A tibble: 3 × 2
+#>   code  year 
+#>   <chr> <chr>
+#> 1 a10   2022 
+#> 2 b10   2011 
+#> 3 e15   2015
+```
+
+[`separate_wider_position()`](https://tidyr.tidyverse.org/reference/separate_wider_delim.html) works a little differently because you typically want to specify the width of each column. So you give it a named integer vector, where the name gives the name of the new column, and the value is the number of characters it occupies. You can omit values from the output by not naming them:
+
+```{r}
+df4 <- tibble(x = c("202215TX", "202122LA", "202325CA")) 
+df4 |> 
+  separate_wider_position(
+    x,
+    widths = c(year = 4, age = 2, state = 2)
+  )
+#> # A tibble: 3 × 3
+#>   year  age   state
+#>   <chr> <chr> <chr>
+#> 1 2022  15    TX   
+#> 2 2021  22    LA   
+#> 3 2023  25    CA
+```
+
+[`separate_wider_delim()`](https://tidyr.tidyverse.org/reference/separate_wider_delim.html)[5](https://r4ds.hadley.nz/strings.html#fn5) requires a fixed and known set of columns. What happens if some of the rows don't have the expected number of pieces? There are two possible problems, too few or too many pieces, so [`separate_wider_delim()`](https://tidyr.tidyverse.org/reference/separate_wider_delim.html) provides two arguments to help: `too_few` and `too_many`. Let's first look at the `too_few` case with the following sample dataset:
+
+You'll notice that we get an error, but the error gives us some suggestions on how you might proceed. Let's start by debugging the problem:
+
+```{r}
+debug <- df |> 
+  separate_wider_delim(
+    x,
+    delim = "-",
+    names = c("x", "y", "z"),
+    too_few = "debug"
+  )
+#> Warning: Debug mode activated: adding variables `x_ok`, `x_pieces`, and
+#> `x_remainder`.
+debug
+#> # A tibble: 5 × 6
+#>   x     y     z     x_ok  x_pieces x_remainder
+#>   <chr> <chr> <chr> <lgl>    <int> <chr>      
+#> 1 1-1-1 1     1     TRUE         3 ""         
+#> 2 1-1-2 1     2     TRUE         3 ""         
+#> 3 1-3   3     <NA>  FALSE        2 ""         
+#> 4 1-3-2 3     2     TRUE         3 ""         
+#> 5 1     <NA>  <NA>  FALSE        1 ""
+```
+
+When you use the debug mode, you get three extra columns added to the output: `x_ok`, `x_pieces`, and `x_remainder` (if you separate a variable with a different name, you'll get a different prefix). Here, `x_ok` lets you quickly find the inputs that failed:
+
+```{r}
+debug |> filter(!x_ok)
+#> # A tibble: 2 × 6
+#>   x     y     z     x_ok  x_pieces x_remainder
+#>   <chr> <chr> <chr> <lgl>    <int> <chr>      
+#> 1 1-3   3     <NA>  FALSE        2 ""         
+#> 2 1     <NA>  <NA>  FALSE        1 ""
+```
+
+`x_pieces` tells us how many pieces were found, compared to the expected 3 (the length of `names`). `x_remainder` isn't useful when there are too few pieces, but we'll see it again shortly.
+
+Sometimes looking at this debugging information will reveal a problem with your delimiter strategy or suggest that you need to do more preprocessing before separating. In that case, fix the problem upstream and make sure to remove `too_few = "debug"` to ensure that new problems become errors.
+
+In other cases, you may want to fill in the missing pieces with `NA`s and move on. That's the job of `too_few = "align_start"` and `too_few = "align_end"` which allow you to control where the `NA`s should go:
+
+```{r}
+df |> 
+  separate_wider_delim(
+    x,
+    delim = "-",
+    names = c("x", "y", "z"),
+    too_few = "align_start"
+  )
+#> # A tibble: 5 × 3
+#>   x     y     z    
+#>   <chr> <chr> <chr>
+#> 1 1     1     1    
+#> 2 1     1     2    
+#> 3 1     3     <NA> 
+#> 4 1     3     2    
+#> 5 1     <NA>  <NA>
+```
+
+You can extract parts of a string using `str_sub(string, start, end)`, where `start` and `end` are the positions where the substring should start and end. The `start` and `end` arguments are inclusive, so the length of the returned string will be `end - start + 1`:
+
+```{r}
+x <- c("Apple", "Banana", "Pear")
+str_sub(x, 1, 3)
+#> [1] "App" "Ban" "Pea"
+```
+
+We could use [`str_sub()`](https://stringr.tidyverse.org/reference/str_sub.html) with [`mutate()`](https://dplyr.tidyverse.org/reference/mutate.html) to find the first and last letter of each name:
+
+```{r}
+babynames |> 
+  mutate(
+    first = str_sub(name, 1, 1),
+    last = str_sub(name, -1, -1)
+  )
+#> # A tibble: 1,924,665 × 7
+#>    year sex   name          n   prop first last 
+#>   <dbl> <chr> <chr>     <int>  <dbl> <chr> <chr>
+#> 1  1880 F     Mary       7065 0.0724 M     y    
+#> 2  1880 F     Anna       2604 0.0267 A     a    
+#> 3  1880 F     Emma       2003 0.0205 E     a    
+#> 4  1880 F     Elizabeth  1939 0.0199 E     h    
+#> 5  1880 F     Minnie     1746 0.0179 M     e    
+#> 6  1880 F     Margaret   1578 0.0162 M     t    
+#> # ℹ 1,924,659 more rows
+```
