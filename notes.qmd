@@ -728,3 +728,117 @@ babynames |>
 #> 6  1880 F     Margaret   1578 0.0162 M     t    
 #> # ℹ 1,924,659 more rows
 ```
+
+## Chapter 16 Regular Expressions
+
+creating phone number pattern
+
+```{r}
+# Example phone number
+phone_number <- "(123) 456-7890"
+
+# Regular expression pattern
+pattern <- "\\(\\d{3}\\) \\d{3}-\\d{4}"
+
+# Check if the phone number matches the pattern
+if (grepl(pattern, phone_number)) {
+  print("Phone number is valid")
+} else {
+  print("Phone number is invalid")
+}
+
+```
+
+By default, regular expressions will match any part of a string. If you want to match at the start or end you need to **anchor** the regular expression using `^` to match the start or `$` to match the end:
+
+When used alone, anchors will produce a zero-width match:
+
+```{r}
+str_view("abc", c("$", "^", "\\b"))
+#> [1] │ abc<>
+#> [2] │ <>abc
+#> [3] │ <>abc<>
+```
+
+In this book, we'll usually write regular expression without quotes, like `\.`. If we need to emphasize what you'll actually type, we'll surround it with quotes and add extra escapes, like `"\\."`.
+
+If `\` is used as an escape character in regular expressions, how do you match a literal `\`? Well, you need to escape it, creating the regular expression `\\`. To create that regular expression, you need to use a string, which also needs to escape `\`. That means to match a literal `\` you need to write `"\\\\"` --- you need four backslashes to match one!
+
+A **character class**, or character **set**, allows you to match any character in a set. As we discussed above, you can construct your own sets with `[]`, where `[abc]` matches "a", "b", or "c" and `[^abc]` matches any character except "a", "b", or "c". Apart from `^` there are two other characters that have special meaning inside of `[]:`
+
+-   `-` defines a range, e.g., `[a-z]` matches any lower case letter and `[0-9]` matches any number.
+
+-   `\` escapes special characters, so `[\^\-\]]` matches `^`, `-`, or `]`.
+
+```{r}
+x <- "abcd ABCD 12345 -!@#%."
+str_view(x, "[abc]+")
+#> [1] │ <abc>d ABCD 12345 -!@#%.
+str_view(x, "[a-z]+")
+#> [1] │ <abcd> ABCD 12345 -!@#%.
+str_view(x, "[^a-z0-9]+")
+#> [1] │ abcd< ABCD >12345< -!@#%.>
+
+# You need an escape to match characters that are otherwise
+# special inside of []
+str_view("a-b-c", "[a-c]")
+#> [1] │ <a>-<b>-<c>
+str_view("a-b-c", "[a\\-c]")
+#> [1] │ <a><->b<-><c>
+```
+
+Some character classes are used so commonly that they get their own shortcut. You've already seen `.`, which matches any character apart from a newline. There are three other particularly useful pairs^[7](https://r4ds.hadley.nz/regexps.html#fn7)^:
+
+-   `\d` matches any digit;\
+    `\D` matches anything that isn't a digit.
+
+-   `\s` matches any whitespace (e.g., space, tab, newline);\
+    `\S` matches anything that isn't whitespace.
+
+-   `\w` matches any "word" character, i.e. letters and numbers;\
+    `\W` matches any "non-word" character.
+
+```{r}
+x <- "abcd ABCD 12345 -!@#%."
+str_view(x, "\\d+")
+#> [1] │ abcd ABCD <12345> -!@#%.
+str_view(x, "\\D+")
+#> [1] │ <abcd ABCD >12345< -!@#%.>
+str_view(x, "\\s+")
+#> [1] │ abcd< >ABCD< >12345< >-!@#%.
+str_view(x, "\\S+")
+#> [1] │ <abcd> <ABCD> <12345> <-!@#%.>
+str_view(x, "\\w+")
+#> [1] │ <abcd> <ABCD> <12345> -!@#%.
+str_view(x, "\\W+")
+#> [1] │ abcd< >ABCD< >12345< -!@#%.>
+```
+
+**Quantifiers** control how many times a pattern matches. In [Section 16.2](https://r4ds.hadley.nz/regexps.html#sec-reg-basics) you learned about `?` (0 or 1 matches), `+` (1 or more matches), and `*` (0 or more matches). For example, `colou?r` will match American or British spelling, `\d+` will match one or more digits, and `\s?` will optionally match a single item of whitespace. You can also specify the number of matches precisely with [`{}`](https://rdrr.io/r/base/Paren.html):
+
+-   `{n}` matches exactly n times.
+
+-   `{n,}` matches at least n times.
+
+-   `{n,m}` matches between n and m times.
+
+    What does `ab+` match? Does it match "a" followed by one or more "b"s, or does it match "ab" repeated any number of times? What does `^a|b$` match? Does it match the complete string a or the complete string b, or does it match a string starting with a or a string ending with b?
+
+    The answer to these questions is determined by operator precedence, similar to the PEMDAS or BEDMAS rules you might have learned in school. You know that `a + b * c` is equivalent to `a + (b * c)` not `(a + b) * c` because `*` has higher precedence and `+` has lower precedence: you compute `*` before `+`.
+
+    Similarly, regular expressions have their own precedence rules: quantifiers have high precedence and alternation has low precedence which means that `ab+` is equivalent to `a(b+)`, and `^a|b$` is equivalent to `(^a)|(b$)`. Just like with algebra, you can use parentheses to override the usual order. But unlike algebra you're unlikely to remember the precedence rules for regexes, so feel free to use parentheses liberally.
+
+First, let's find all sentences that start with "The". Using the `^` anchor alone is not enough
+
+Because that pattern also matches sentences starting with words like `They` or `These`. We need to make sure that the "e" is the last letter in the word, which we can do by adding a word boundary:
+
+```{r}
+str_view(sentences, "^The\\b")
+#>  [1] │ <The> birch canoe slid on the smooth planks.
+#>  [6] │ <The> juice of lemons makes fine punch.
+#>  [7] │ <The> box was thrown beside the parked truck.
+#>  [8] │ <The> hogs were fed chopped corn and garbage.
+#> [11] │ <The> boy was there when the sun rose.
+#> [13] │ <The> source of the huge river is the clear spring.
+#> ... and 250 more
+```
