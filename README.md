@@ -40,8 +40,8 @@ The solutions in this repository span **16 chapters** of the book, organized as 
 12. **Functions**
 13. **Vectors**
 14. **Iteration**
-15. **Modeling Basics**
-16. **Communicating Results**
+15. **Strings**
+16. **Regular Expressions**
 
 Each chapter folder contains R scripts and markdown files with both code and detailed explanations.
 
@@ -109,9 +109,9 @@ Feedback and contributions are welcome! If you have suggestions or improvements 
 
 ### 📂 Repository Structure
 - `Chapter-X/`: Solutions for Chapter X
-  - `R-scripts/`: Contains R scripts for the chapter's exercises
-  - `Markdown/`: Contains R Markdown files for reproducible reports
+- `Notes/`: Everything I've learned from this curriculum
 
+P.S due to time columns may not match current book edition.
 ---
 
 Thank you for visiting this repository! I hope these solutions help others on their data science journey just as much as they have helped me.
